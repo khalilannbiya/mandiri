@@ -1,50 +1,49 @@
 <!-- START: HEADER -->
 <header class="{{ Route::current()->getName() == 'index' ? 'absolute' : '' }} w-full z-50 px-4">
     <div class="container mx-auto py-5">
-        <div class="flex flex-stretch items-center">
+        <div
+            class="flex flex-stretch justify-start items-center py-5 divide-x divide-red-500 border-b-2 border-slate-400">
             <div class="w-56 items-center flex">
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('frontend/images/content/logo.png') }}"
                         alt="Luxspace | Fulfill your house with beautiful furniture" />
                 </a>
             </div>
-            <div class="w-full"></div>
-            <div class="w-auto">
-                <ul class="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center"
+            {{-- <div class="w-full"></div> --}}
+            <div class="w-full px-6">
+                <ul class="fixed bg-white inset-0 opacity-0 md:visible md:bg-transparent md:relative md:opacity-100"
                     id="menu">
-                    <li class="mx-3 py-6 md:py-0">
+                    <li class=" py-6 md:py-0">
                         <a href="#"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Showcase</a>
+                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Beranda</a>
                     </li>
-                    <li class="mx-3 py-6 md:py-0">
+                    <li class=" py-6 md:py-0">
                         <a href="{{ route('catalog') }}"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Catalog</a>
+                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Produk
+                            Kami</a>
                     </li>
-                    <li class="mx-3 py-6 md:py-0">
+                    <li class=" py-6 md:py-0">
                         <a href="#"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Delivery</a>
-                    </li>
-                    <li class="mx-3 py-6 md:py-0">
-                        <a href="#"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Rewards</a>
+                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Tentang
+                            Kami</a>
                     </li>
                     @auth
-                    {{-- Konten yang hanya dapat diakses oleh pengguna yang terautentikasi --}}
-                    <li class="mx-3 py-6 md:py-0">
-                        <a href="{{ route('dashboard.index') }}"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Dashboard</a>
-                    </li>
+                        {{-- Konten yang hanya dapat diakses oleh pengguna yang terautentikasi --}}
+                        {{-- <li class="mx-3 py-6 md:py-0">
+                            <a href="{{ route('dashboard.index') }}"
+                                class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Dashboard</a>
+                        </li> --}}
                     @endauth
                     @guest
-                    {{-- Konten yang hanya dapat diakses oleh pengguna yang belum terautentikasi --}}
-                    <li class="mx-3 py-6 md:py-0">
-                        <a href="{{ route('login') }}"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Login</a>
-                    </li>
-                    <li class="mx-3 py-6 md:py-0">
-                        <a href="{{ route('register') }}"
-                            class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Register</a>
-                    </li>
+                        {{-- Konten yang hanya dapat diakses oleh pengguna yang belum terautentikasi --}}
+                        {{-- <li class="mx-3 py-6 md:py-0">
+                            <a href="{{ route('login') }}"
+                                class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Login</a>
+                        </li>
+                        <li class="mx-3 py-6 md:py-0">
+                            <a href="{{ route('register') }}"
+                                class="text-black  {{ Route::current()->getName() == 'index' ? 'md:text-white' : 'md:text-black' }} hover:underline">Register</a>
+                        </li> --}}
                     @endguest
                 </ul>
             </div>
