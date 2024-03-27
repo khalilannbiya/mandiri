@@ -1,61 +1,45 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8" />
-    <title>LuxSpace</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @include('components.frontend.meta')
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    {{-- Favicon --}}
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" />
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.png') }}" />
 
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="{{ asset('frontend/images/content/favicon.png') }}" />
-    <!-- Place favicon.ico in the root directory -->
+    {{-- Google Font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    {{-- Box Icons --}}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    {{-- Title --}}
+    <title>@yield('title', '')Percetakan Mandiri Print — Jasa Digital Printing & Percetakan Di Jakarta</title>
+
+    <link rel="canonical" href="{{ URL::current() }}">
 
     @vite('resources/css/app.css')
-
-    <link rel="icon" href="{{ asset('frontend/images/content/favicon.png') }}" />
-
-    <meta name="theme-color" content="#000" />
-    <link rel="icon" href="{{ asset('frontend/favicon.ico') }}">
-
-    <link href="{{ asset('frontend/css/app.minify.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Add your site or application content here -->
-
+    {{-- Header --}}
     @include('components.frontend.navbar')
-    @yield('content')
+
+    {{-- Main Content --}}
+    <main>
+        @yield('content')
+    </main>
+
+    {{-- Footer --}}
     @include('components.frontend.footer')
 
-    <!-- START: LOAD SVG -->
-    <!-- <svg width="23" height="26" class="hidden" id="icon-play">
-      <path
-        d="M21 9.536c2.667 1.54 2.667 5.39 0 6.928l-15 8.66c-2.667 1.54-6-.385-6-3.464V4.34C0 1.26 3.333-.664 6 .876l15 8.66z"
-        fill="#fff"
-      />
-    </svg> -->
-    <!-- END: LOAD SVG  -->
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
-    <script src="{{ asset('/frontend/js/app.js') }}"></script>
+    @vite('resources/js/app.js')
+    @stack('script')
 </body>
 
 </html>
