@@ -1,61 +1,37 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>LuxSpace</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    {{-- Font Google --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="{{ asset('frontend/images/content/favicon.png') }}" />
-    <!-- Place favicon.ico in the root directory -->
-
-    @vite('resources/css/app.css')
+    <!-- Icon Tabler -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabzler/icons-webfont@latest/tabler-icons.min.css">
 
     <link rel="icon" href="{{ asset('frontend/images/content/favicon.png') }}" />
 
-    <meta name="theme-color" content="#000" />
-    <link rel="icon" href="{{ asset('frontend/favicon.ico') }}">
+    <title>Percetakan Mandiri Print | @yield('title')</title>
 
-    <link href="{{ asset('frontend/css/app.minify.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css'])
 </head>
 
 <body>
-    <!-- Add your site or application content here -->
-
     @include('components.frontend.navbar')
-    @yield('content')
+    <main class="mx-auto max-w-7xl px-4 md:px-4">
+        @yield('content')
+    </main>
     @include('components.frontend.footer')
 
-    <!-- START: LOAD SVG -->
-    <!-- <svg width="23" height="26" class="hidden" id="icon-play">
-      <path
-        d="M21 9.536c2.667 1.54 2.667 5.39 0 6.928l-15 8.66c-2.667 1.54-6-.385-6-3.464V4.34C0 1.26 3.333-.664 6 .876l15 8.66z"
-        fill="#fff"
-      />
-    </svg> -->
-    <!-- END: LOAD SVG  -->
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
-    <script src="{{ asset('/frontend/js/app.js') }}"></script>
+    @vite('resources/js/app.js')
+    @stack('script')
 </body>
 
 </html>

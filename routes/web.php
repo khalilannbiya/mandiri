@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/test', 'test');
+
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 Route::get('/catalog', [FrontendController::class, 'catalog'])->name('catalog');
