@@ -30,34 +30,35 @@
                         <label for="default-search"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative flex justify-end gap-2">
-                            <svg class="w-4 h-4 absolute top-[10px] left-[50px] text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <svg class="w-4 h-4 absolute top-[10px] left-[20px] sm:left-[15px] text-white"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
                             <input type="search" id="default-search"
-                                class="block w-[60%] p-2 pl-8 text-sm text-gray-900 placeholder:text-white border border-white rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
+                                class="block w-[70%] sm:w-full p-2 pl-9 sm:pl-11 text-sm text-white placeholder:text-white border border-white rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Cari Produk..." required />
                             <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2">Search</button>
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                         </div>
                     </form>
                 </li>
             </ul>
-            <div class="w-1/3 hidden lg:block">
+            <div class="w-1/3 lg:w-[40%] hidden lg:block">
                 <form class="">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div class="relative flex justify-end gap-2">
-                        <svg class="w-4 h-4 absolute top-[10px] lg:left-[20px] xl:left-[50px] text-gray-500"
+                        <svg class="w-4 h-4 lg:w-[14px] absolute top-[10px] lg:left-[10px] xl:left-[55px] text-gray-500"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                         <input type="search" id="default-search"
-                            class="block lg:w-[68%] xl:w-[60%] p-2 pl-8 text-sm border border-slate-600 rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
+                            class="block lg:w-[75%] xl:w-[60%] p-2 pl-8 text-sm border border-slate-600 rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Cari Produk..." required />
                         <button type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2">Search</button>
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                     </div>
                 </form>
             </div>
