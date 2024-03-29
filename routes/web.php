@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/test', 'test');
+Route::view('/test', 'pages.frontend.ourproducts');
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 

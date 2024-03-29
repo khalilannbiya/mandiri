@@ -26,7 +26,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="font-rubik">
     {{-- Header --}}
     @include('components.frontend.navbar')
 
