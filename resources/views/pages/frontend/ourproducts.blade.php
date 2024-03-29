@@ -1,15 +1,14 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <section class="">
+    <section class="pt-[54px]">
         <div
             class="bg-slate-300 aspect-square lg:aspect-auto h-[300px] w-full flex flex-col items-center justify-center gap-4">
             <h1 class="text-4xl font-bold">Semua Produk</h1>
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
-                        <a href="#"
-                            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-white">
                             <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path
@@ -26,7 +25,7 @@
                                     d="m1 9 4-4-4-4" />
                             </svg>
                             <a href="#"
-                                class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2">Projects</a>
+                                class="ms-1 text-sm font-medium text-gray-700 hover:text-white md:ms-2">Projects</a>
                         </div>
                     </li>
                     <li aria-current="page">
@@ -47,16 +46,16 @@
         <section class="w-full lg:w-[25%] xl-[20%] flex justify-center">
             <div class="flex flex-col items-center lg:items-start gap-6">
                 <h2 class="text-xl font-semibold hidden lg:block">Kategori Produk</h2>
-                <div class="hidden w-full lg:flex lg:flex-col">
+                <div class="hidden lg:flex lg:flex-col">
                     <a href=""
-                        class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg hover:bg-slate-300 transition-all duration-500 ease-in-out">
-                        <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                        class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg bg-slate-300 transition-all duration-500 ease-in-out">
+                        <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" style="transform: ;msFilter:;">
                             <path
                                 d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z">
                             </path>
                         </svg>
-                        <p class="group-hover:text-white">Kelengkapan Sekolah</p>
+                        <p class="text-white">Kelengkapan Sekolah</p>
                     </a>
                     <a href=""
                         class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg hover:bg-slate-300 transition-all duration-500 ease-in-out">
@@ -173,11 +172,11 @@
             </div>
         </section>
         <section
-            class="w-full lg:w-[75%] py-16 md:py-6 flex flex-wrap justify-center lg:justify-start items-center gap-y-20 gap-x-12">
+            class="w-full lg:w-[75%] py-16 md:py-6 flex flex-wrap justify-center lg:justify-start items-center gap-y-20 gap-x-8 xl:gap-x-12">
             <article
-                class="relative flex w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
+                class="relative flex w-[250px] xl:w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
                 <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-slate-400 to-slate-500">
                 </div>
                 <div class="p-6">
                     <h5
@@ -192,7 +191,7 @@
                     <a href="" class="underline">Detail</a>
                     <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
                         data-ripple-light="true"
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-blue-500 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
                             <path
@@ -206,9 +205,9 @@
                 </div>
             </article>
             <article
-                class="relative flex w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
+                class="relative flex w-[250px] xl:w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
                 <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-slate-400 to-slate-500">
                 </div>
                 <div class="p-6">
                     <h5
@@ -223,7 +222,7 @@
                     <a href="" class="underline">Detail</a>
                     <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
                         data-ripple-light="true"
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-blue-500 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
                             <path
@@ -237,9 +236,9 @@
                 </div>
             </article>
             <article
-                class="relative flex w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
+                class="relative flex w-[250px] xl:w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
                 <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-slate-400 to-slate-500">
                 </div>
                 <div class="p-6">
                     <h5
@@ -254,69 +253,7 @@
                     <a href="" class="underline">Detail</a>
                     <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
                         data-ripple-light="true"
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-blue-500 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: white;transform: ;msFilter:;">
-                            <path
-                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
-                            </path>
-                            <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                            <circle cx="17.5" cy="19.5" r="1.5"></circle>
-                        </svg>
-                        Beli
-                    </a>
-                </div>
-            </article>
-            <article
-                class="relative flex w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
-                <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                </div>
-                <div class="p-6">
-                    <h5
-                        class="mb-2 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        Tailwind card
-                    </h5>
-                    <p class="block text-base font-light leading-relaxed text-inherit antialiased">
-                        Rp. 69,000
-                    </p>
-                </div>
-                <div class="p-6 pt-0 flex justify-between items-center">
-                    <a href="" class="underline">Detail</a>
-                    <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
-                        data-ripple-light="true"
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-blue-500 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: white;transform: ;msFilter:;">
-                            <path
-                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
-                            </path>
-                            <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                            <circle cx="17.5" cy="19.5" r="1.5"></circle>
-                        </svg>
-                        Beli
-                    </a>
-                </div>
-            </article>
-            <article
-                class="relative flex w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
-                <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                </div>
-                <div class="p-6">
-                    <h5
-                        class="mb-2 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        Tailwind card
-                    </h5>
-                    <p class="block text-base font-light leading-relaxed text-inherit antialiased">
-                        Rp. 69,000
-                    </p>
-                </div>
-                <div class="p-6 pt-0 flex justify-between items-center">
-                    <a href="" class="underline">Detail</a>
-                    <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
-                        data-ripple-light="true"
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-blue-500 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
                             <path
@@ -333,43 +270,43 @@
     </section>
     <section class="flex justify-between items-center py-6">
         <div class="lg:w-[25%] xl-[20%]"></div>
-        <div class="w-full lg:w-[75%] flex justify-center lg:justify-start items-center">
+        <div class="w-full lg:w-[75%] flex justify-center items-center">
             <nav aria-label="Page navigation example" class="">
                 <ul class="inline-flex -space-x-px text-sm">
-                    <li>
+                    <li class="group">
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-s-lg hover:bg-slate-100">
+                            <svg class="group-hover:fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
                                 <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">1</a>
+                            class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-slate-300 hover:bg-slate-100 hover:text-slate-700">1</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
+                            class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-slate-300 hover:bg-slate-100 hover:text-slate-700">2</a>
                     </li>
                     <li>
                         <a href="#" aria-current="page"
-                            class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:bg-gray-700 dark:text-white">3</a>
+                            class="flex items-center justify-center px-3 h-8 text-blue-600 border border-slate-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:bg-slate-700 dark:text-white">3</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">4</a>
+                            class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-slate-300 hover:bg-slate-100 hover:text-slate-700">4</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">5</a>
+                            class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-slate-300 hover:bg-slate-100 hover:text-slate-700">5</a>
                     </li>
-                    <li>
+                    <li class="group">
                         <a href="#"
-                            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-s-lg hover:bg-slate-100">
+                            <svg class="group-hover:fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
                                 <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
                             </svg>
                         </a>
