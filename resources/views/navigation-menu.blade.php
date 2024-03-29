@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('index') }}">
+                    <a href="{{ route('dashboard.index') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
@@ -14,6 +14,10 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard.category.index') }}"
+                        :active="request()->routeIs('dashboard.category.index')">
+                        {{ __('Categories') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('dashboard.product.index') }}"
                         :active="request()->routeIs('dashboard.product.index')">
@@ -159,6 +163,10 @@
             <x-responsive-nav-link href="{{ route('dashboard.index') }}"
                 :active="request()->routeIs('dashboard.index')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('dashboard.category.index') }}"
+                :active="request()->routeIs('dashboard.category.index')">
+                {{ __('Category') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('dashboard.product.index') }}"
                 :active="request()->routeIs('dashboard.product.index')">

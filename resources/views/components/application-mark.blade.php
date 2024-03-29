@@ -1,2 +1,2 @@
-<img src="{{ asset('frontend/images/content/logo.png') }}"
-    alt="Luxspace | Fulfill your house with beautiful furniture" />
+<img src="{{ asset('assets/images/logo.png') }}"
+    alt="Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
