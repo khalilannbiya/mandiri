@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\ProductGallery;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\ProductGalleryRequest;
@@ -14,11 +15,11 @@ class ProductGalleryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Product $product)
+    public function index(string $slug)
     {
+        $product = Product::with('productGalleries')->where('slug', $slug)->first();
         if (request()->ajax()) {
-            $query = ProductGallery::query();
-            $productGalleries = $query->where('product_id', $product->id)->get();
+            $productGalleries = $product->productGalleries;
             return DataTables::of($productGalleries)
                 ->addColumn('action', function ($item) {
                     return '
@@ -33,9 +34,6 @@ class ProductGalleryController extends Controller
                         <img style="max-width : 150px" src="' . Storage::url($item->url) . '" alt="Image">
                     ';
                 })
-                ->editColumn('is_featured', function ($item) {
-                    return $item->is_featured ? 'Yes' : 'No';
-                })
                 ->rawColumns(['action', 'url'])
                 ->make();
         }
@@ -45,8 +43,9 @@ class ProductGalleryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Product $product)
+    public function create(string $slug)
     {
+        $product = Product::where('slug', $slug)->first();
         return view('pages.dashboard.gallery.create', compact('product'));
     }
 
@@ -55,19 +54,27 @@ class ProductGalleryController extends Controller
      */
     public function store(ProductGalleryRequest $request, Product $product)
     {
-        $files = $request->file('files');
-        if ($request->hasFile('files')) {
-            foreach ($files as $file) {
-                $path = $file->store('public/gallery');
+        try {
+            DB::beginTransaction();
 
-                ProductGallery::create([
-                    'product_id' => $product->id,
-                    'url' => $path,
-                ]);
+            $files = $request->file('files');
+            if ($request->hasFile('files')) {
+                foreach ($files as $file) {
+                    $path = $file->store('public/gallery');
+
+                    ProductGallery::create([
+                        'product_id' => $product->id,
+                        'url' => $path,
+                    ]);
+                }
             }
-        }
 
-        return redirect()->route('dashboard.product.gallery.index', $product->id);
+            DB::commit();
+            return redirect()->route('dashboard.product.gallery.index', $product->slug);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->withErrors(['error' => 'Failed to add photos: ' . $e->getMessage()]);
+        }
     }
 
     /**
@@ -101,6 +108,6 @@ class ProductGalleryController extends Controller
     {
         $gallery->delete();
 
-        return redirect()->route('dashboard.product.gallery.index', $gallery->product_id);
+        return redirect()->route('dashboard.product.gallery.index', $gallery->product->slug);
     }
 }

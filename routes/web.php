@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
@@ -36,12 +37,21 @@ Route::middleware([
 
     // Route yang hanya boleh di akses jika role usernya adalah ADMIN
     Route::middleware(['admin'])->group(function () {
-        Route::resource('product', ProductController::class);
-        Route::resource('product.gallery', ProductGalleryController::class)->shallow()->only([
-            'index', 'create', 'store', 'destroy'
+        Route::resource('product', ProductController::class)->only([
+            'index', 'create', 'store', 'update', 'destroy'
         ]);
+        Route::get('/product/{slug}/edit', [ProductController::class, 'edit'])->name('product.edit');
+
+        Route::resource('product.gallery', ProductGalleryController::class)->shallow()->only([
+            'store', 'destroy'
+        ]);
+        Route::get('/product/{slug}/gallery', [ProductGalleryController::class, 'index'])->name('product.gallery.index');
+        Route::get('/product/{slug}/gallery/create', [ProductGalleryController::class, 'create'])->name('product.gallery.create');
+
         Route::resource('user', UserController::class)->only([
             'index', 'edit', 'update', 'destroy'
         ]);
+        Route::resource('category', CategoryController::class);
+        Route::get('/category/{slug}/products', [CategoryController::class, 'showByCategory'])->name('category.show-by-category');
     });
 });

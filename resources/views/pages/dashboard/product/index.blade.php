@@ -17,6 +17,7 @@
                     {data:'id', name:'id', width:'5%'},
                     {data:'name', name:'name'},
                     {data:'price', name:'price'},
+                    {data:'category.name', name:'category'},
                     {
                         data:'action',
                         name:'action',
@@ -34,7 +35,7 @@
             <div class="mb-10">
                 <a href="{{ route('dashboard.product.create') }}"
                     class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded shadow-lg">+
-                    Create</a>
+                    Tambah Produk</a>
             </div>
             <div class="shadow overflow-hidden sm-rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
@@ -44,6 +45,7 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>Harga</th>
+                                <th>Kategori</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

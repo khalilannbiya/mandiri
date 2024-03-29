@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <a href="{{ route('dashboard.product.index') }}">Product</a> &raquo; Create
+            <a href="{{ route('dashboard.product.index') }}">Product</a> &raquo; Tambah Produk
         </h2>
     </x-slot>
 
@@ -31,16 +31,34 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label for="name"
-                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Name</label>
-                            <input type="text" placeholder="Product Name" name="name" id="name"
+                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Nama
+                                Produk</label>
+                            <input type="text" placeholder="Masukan Nama Produk" name="name" id="name"
                                 value="{{ old('name') }}"
                                 class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
+                            <label for="category_id"
+                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Nama
+                                Kategori</label>
+                            <select name="category_id" id="category_id"
+                                class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                <option selected value="">Select Nama Kategori</option>
+                                @forelse ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @empty
+                                <option selected disabled>Belum Ada Kategori</option>
+                                @endforelse
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
                             <label for="description"
-                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Description</label>
+                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Deskripsi</label>
                             <textarea name="description" id="description"
                                 class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{!! old('description') !!}</textarea>
                         </div>
@@ -48,8 +66,8 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label for="price"
-                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Price</label>
-                            <input type="number" placeholder="Product Price" name="price" id="price"
+                                class="block uppercase tracking-widest text-gray-700 text-xs font-bold mb-2">Harga</label>
+                            <input type="number" placeholder="Masukan Harga" name="price" id="price"
                                 value="{{ old('price') }}"
                                 class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                         </div>
@@ -57,8 +75,8 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <button type="submit"
-                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">Save
-                                Product</button>
+                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">Simpan
+                                Produk</button>
                         </div>
                     </div>
             </div>
