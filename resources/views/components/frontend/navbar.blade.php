@@ -86,7 +86,7 @@
             window.addEventListener("scroll", function(e) {
                 lastScrollPosition = window.scrollY;
 
-                if (lastScrollPosition > 50) {
+                if (lastScrollPosition > 10) {
                     navbar.classList.add(
                         "transition-all",
                         "duration-500",
