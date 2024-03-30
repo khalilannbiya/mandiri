@@ -27,6 +27,8 @@ Route::get('/details/{slug}', [FrontendController::class, 'details'])->name('det
 
 Route::get('/products', [FrontendController::class, 'products'])->name('products');
 
+Route::get('/category/{slug}/products', [FrontendController::class, 'showByCategory'])->name('show-by-category');
+
 // Route yang hanya boleh di akses jika sudah login
 Route::middleware([
     'auth:sanctum',
