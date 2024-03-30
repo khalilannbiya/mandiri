@@ -101,10 +101,15 @@ class FrontendController extends Controller
         //
     }
 
-    public function products()
+    public function products(Request $request)
     {
-        $products = Product::with(['productGalleries'])->paginate(6);
+        $products = Product::with(['productGalleries']);
         $categories = Category::all();
+        if ($request->has('keyword')) {
+            $products = $products->where('name', 'like', '%' . $request->keyword . '%');
+        }
+
+        $products = $products->paginate(6);
         return view('pages.frontend.ourproducts', compact('products', 'categories'));
     }
 }
