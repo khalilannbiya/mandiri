@@ -112,4 +112,14 @@ class FrontendController extends Controller
         $products = $products->paginate(6);
         return view('pages.frontend.ourproducts', compact('products', 'categories'));
     }
+
+    public function showByCategory(string $slug)
+    {
+        $categories = Category::all();
+
+        // menampilkan product by category
+        $category = Category::with('products')->where('slug', $slug)->firstOrFail();
+        $products = $category->products()->with('productGalleries')->paginate(6);
+        return view('pages.frontend.products-by-category', compact('products', 'category', 'categories'));
+    }
 }
