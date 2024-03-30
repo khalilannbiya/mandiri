@@ -1,12 +1,11 @@
 <header class="">
-    {{-- -- Navbar Before Login -- --}}
     <nav id="navbar" class="z-[999] fixed w-full">
         <div
             class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-2">
             <div>
                 <a href="#up">
-                    <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]" src="{{ asset('frontend/images/content/logo.png') }}"
-                        alt="Logo LaporDesa" />
+                    <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]"
+                        src="{{ asset('frontend/images/content/logo.png') }}" alt="Logo Percetakan Mandiri Print" />
                 </a>
             </div>
             <ul id="navList"
@@ -16,7 +15,7 @@
                         class="transition-all text-white lg:text-black duration-500 md:text-lg lg:text-sm hover:text-vermillion active">Beranda</a>
                 </li>
                 <li>
-                    <a href=""
+                    <a href="{{ route('products') }}"
                         class="transition-all text-white lg:text-black duration-500 md:text-lg lg:text-sm hover:text-vermillion">Produk
                         Kami</a>
                 </li>
@@ -31,8 +30,7 @@
                             class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative flex justify-end gap-2">
                             <svg class="w-4 h-4 absolute top-[10px] left-[20px] sm:left-[15px] text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 20 20">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
@@ -64,9 +62,8 @@
             </div>
             <div class="absolute z-30 right-4 md:right-4 lg:hidden" id="toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" id="iconToggle"
-                    class="icon icon-tabler icon-tabler-align-justified" width="27" height="27"
-                    viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
+                    class="icon icon-tabler icon-tabler-align-justified" width="27" height="27" viewBox="0 0 24 24"
+                    stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M4 6l16 0"></path>
                     <path d="M4 12l16 0"></path>
@@ -78,8 +75,8 @@
 </header>
 
 @push('script')
-    <script>
-        // Scroll Navbar
+<script>
+    // Scroll Navbar
         document.onreadystatechange = function() {
             let lastScrollPosition = 0;
             const navbar = document.getElementById("navbar");
@@ -123,5 +120,5 @@
             document.getElementById("iconToggle").setAttribute("width", "36");
             document.getElementById("iconToggle").setAttribute("height", "36");
         }
-    </script>
+</script>
 @endpush
