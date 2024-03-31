@@ -19,14 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/test', 'pages.frontend.ourproducts');
-Route::view('/product-detail', 'pages.frontend.product-detail');
-
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 Route::get('/catalog', [FrontendController::class, 'catalog'])->name('catalog');
 
 Route::get('/details/{slug}', [FrontendController::class, 'details'])->name('details');
+
+Route::get('/products', [FrontendController::class, 'products'])->name('products');
+
+Route::get('/category/{slug}/products', [FrontendController::class, 'showByCategory'])->name('show-by-category');
 
 // Route yang hanya boleh di akses jika sudah login
 Route::middleware([

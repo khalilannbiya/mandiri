@@ -8,7 +8,7 @@ Produk Kami —
 <section class="pt-[54px]">
     <div
         class="bg-slate-300 aspect-square lg:aspect-auto h-[300px] w-full flex flex-col items-center justify-center gap-4">
-        <h1 class="text-4xl font-bold">Semua Produk</h1>
+        <h1 class="text-4xl font-bold">{{ $category->name }}</h1>
         <nav class="flex" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
@@ -29,7 +29,7 @@ Produk Kami —
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 9 4-4-4-4" />
                         </svg>
-                        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2">Products</span>
+                        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2">{{ $category->name }}</span>
                     </div>
                 </li>
             </ol>
@@ -41,8 +41,20 @@ Produk Kami —
         <div class="flex flex-col items-center lg:items-start gap-6">
             <h2 class="text-xl font-semibold hidden lg:block">Kategori Produk</h2>
             <div class="hidden lg:flex lg:flex-col">
-                @forelse ($categories as $category)
-                <a href="{{ route('show-by-category', $category->slug) }}"
+                @forelse ($categories as $item)
+                @if ($item->id == $category->id)
+                <a href="{{ route('show-by-category', $item->slug) }}"
+                    class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg bg-slate-300 transition-all duration-500 ease-in-out">
+                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                        <path
+                            d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z">
+                        </path>
+                    </svg>
+                    <p class="text-white">{{ $item->name }}</p>
+                </a>
+                @else
+                <a href="{{ route('show-by-category', $item->slug) }}"
                     class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg hover:bg-slate-300 transition-all duration-500 ease-in-out">
                     <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -50,8 +62,9 @@ Produk Kami —
                             d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z">
                         </path>
                     </svg>
-                    <p class="group-hover:text-white">{{ $category->name }}</p>
+                    <p class="group-hover:text-white">{{ $item->name }}</p>
                 </a>
+                @endif
                 @empty
                 <p>Belum ada kategori</p>
                 @endforelse

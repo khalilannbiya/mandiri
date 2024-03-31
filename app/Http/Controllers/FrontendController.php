@@ -7,6 +7,7 @@ use Midtrans\Snap;
 use App\Models\Cart;
 use Midtrans\Config;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\TransactionItem;
@@ -25,7 +26,7 @@ class FrontendController extends Controller
          * diurutkan berdasarkan tanggal pembuatan dari yang terbaru ke yang paling lama,
          * dan dibatasi hanya 10 data saja.
          */
-        $products = Product::with(['productGallery'])->latest()->limit(10)->get();
+        $products = Product::with(['productGalleries'])->latest()->limit(10)->get();
 
         return view('pages.frontend.index', compact('products'));
     }
@@ -98,5 +99,27 @@ class FrontendController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function products(Request $request)
+    {
+        $products = Product::with(['productGalleries']);
+        $categories = Category::all();
+        if ($request->has('keyword')) {
+            $products = $products->where('name', 'like', '%' . $request->keyword . '%');
+        }
+
+        $products = $products->paginate(6);
+        return view('pages.frontend.ourproducts', compact('products', 'categories'));
+    }
+
+    public function showByCategory(string $slug)
+    {
+        $categories = Category::all();
+
+        // menampilkan product by category
+        $category = Category::with('products')->where('slug', $slug)->firstOrFail();
+        $products = $category->products()->with('productGalleries')->paginate(6);
+        return view('pages.frontend.products-by-category', compact('products', 'category', 'categories'));
     }
 }
