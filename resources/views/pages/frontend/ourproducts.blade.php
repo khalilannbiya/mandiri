@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('title')
+Produk Kami —
+@endsection
+
 @section('content')
 <section class="pt-[54px]">
     <div

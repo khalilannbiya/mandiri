@@ -119,7 +119,7 @@ class CategoryController extends Controller
 
     public function showByCategory(string $slug)
     {
-        $category = Category::with('products')->where('slug', $slug)->first();
+        $category = Category::with('products')->where('slug', $slug)->firstOrFail();
         if (request()->ajax()) {
             $query = $category->products;
             return DataTables::of($query)
