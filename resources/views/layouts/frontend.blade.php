@@ -18,6 +18,9 @@
     {{-- Box Icons --}}
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    {{-- Flowbite Components --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
     {{-- Title --}}
     <title>@yield('title', '')Percetakan Mandiri Print — Jasa Digital Printing & Percetakan Di Jakarta</title>
 
