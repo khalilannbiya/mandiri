@@ -23,7 +23,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 Route::get('/catalog', [FrontendController::class, 'catalog'])->name('catalog');
 
-Route::get('/details/{slug}', [FrontendController::class, 'details'])->name('details');
+Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 
 Route::get('/products', [FrontendController::class, 'products'])->name('products');
 

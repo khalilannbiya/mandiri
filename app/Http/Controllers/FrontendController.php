@@ -31,25 +31,12 @@ class FrontendController extends Controller
         return view('pages.frontend.index', compact('products'));
     }
 
-    public function details(Request $request, $slug)
+    public function details(Request $request, string $slug)
     {
-        /**
-         * Pertama-tama, kita mendefinisikan variabel $product dan memanggil model Product.
-         * Kemudian, kita menggunakan metode with() untuk memuat kaitan relasional productGallery.
-         * Kemudian, kita menggunakan metode where() untuk memfilter data Product berdasarkan kolom slug yang sama dengan nilai variabel $slug.
-         * Terakhir, kita menggunakan metode firstOrFail() untuk mengambil data pertama yang sesuai dengan kriteria pencarian, atau mengembalikan HTTP error 404 jika tidak ada data yang sesuai.
-         */
-        $product = Product::with(['productGallery'])->where('slug', $slug)->firstOrFail();
-
-        /**
-         * Pertama-tama, kita mendefinisikan variabel $recommendations dan memanggil model Product.
-         * Kemudian, kita menggunakan metode with() untuk memuat kaitan relasional productGallery.
-         * Kemudian, kita menggunakan metode whereNot() untuk memfilter data Product dengan menghilangkan data yang memiliki kolom slug yang sama dengan nilai variabel $slug.
-         * Metode inRandomOrder() digunakan untuk mengurutkan data secara acak sebelum diambil, dan metode limit() digunakan untuk membatasi jumlah data yang diambil, dalam hal ini sebanyak 4 data saja. Terakhir, kita menggunakan metode get() untuk mengeksekusi query dan mengambil data.
-         */
-        $recommendations = Product::with(['productGallery'])->whereNot('slug', $slug)->inRandomOrder()->limit(4)->get();
-
-        return view('pages.frontend.details', compact('product', 'recommendations'));
+        $categories = Category::all();
+        $product = Product::with(['category', 'productGalleries'])->where('slug', $slug)->firstOrFail();
+        $category = $product->category;
+        return view('pages.frontend.product-detail', compact('product', 'categories', 'category'));
     }
 
     /**
