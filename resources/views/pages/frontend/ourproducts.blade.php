@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('title')
-Produk Kami —
+    Produk Kami —
 @endsection
 
 @section('content')
@@ -54,18 +54,18 @@ Produk Kami —
         <h2>belum ada product</h2>
         @endforelse
     </section>
-</section>
+    </section>
 
-{{-- Pagination --}}
-{{-- if the $products has more than one page (meaning there are multiple pages) --}}
-@if ($products->lastPage() > 1)
-{{ $products->links('components.frontend.pagination') }}
-@endif
+    {{-- Pagination --}}
+    {{-- if the $products has more than one page (meaning there are multiple pages) --}}
+    @if ($products->lastPage() > 1)
+        {{ $products->links('components.frontend.pagination') }}
+    @endif
 @endsection
 
 @push('script')
-<script>
-    document.addEventListener("DOMContentLoaded", function(evt) {
+    <script>
+        document.addEventListener("DOMContentLoaded", function(evt) {
 
             document.querySelectorAll(".title").forEach(function(el) {
                 el.addEventListener("click", function(evt) {
@@ -91,5 +91,5 @@ Produk Kami —
             });
 
         });
-</script>
+    </script>
 @endpush()
