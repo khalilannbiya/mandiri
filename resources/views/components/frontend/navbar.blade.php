@@ -13,16 +13,16 @@
                 class="fixed bg-slate-400 lg:ml-10 lg:static flex flex-col lg:flex-row justify-center items-center gap-7 md:gap-9 lg:gap-7 top-0 right-[-1000px] md:right-[-1000px] h-screen lg:h-auto w-full z-20 lg:z-0 bg-pewter-blue lg:bg-transparent lg:text-secondary font-semibold transition-all duration-1000">
                 <li>
                     <a href="{{ route('index') }}"
-                        class="transition-all text-white lg:text-black hover:text-primary active:text-primary duration-500 md:text-lg lg:text-sm hover:text-vermillion active">Beranda</a>
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ Route::current()->getName() == 'index' ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Beranda</a>
                 </li>
                 <li>
                     <a href="{{ route('products') }}"
-                        class="transition-all text-white lg:text-black hover:text-primary duration-500 md:text-lg lg:text-sm hover:text-vermillion">Produk
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['products', 'show-by-category', 'product-details']) ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Produk
                         Kami</a>
                 </li>
                 <li>
                     <a href="#about"
-                        class="transition-all text-white lg:text-black hover:text-primary duration-500 md:text-lg lg:text-sm hover:text-vermillion">Tentang
+                        class="transition-all text-white lg:text-black hover:text-black duration-500 md:text-lg lg:text-sm ">Tentang
                         Kami</a>
                 </li>
                 <li class="block lg:hidden">
