@@ -16,7 +16,7 @@
                     Bicara
                     Kualitasmu
                 </h1>
-                <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-xl">
+                <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-xl leading-normal">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, dolor qui magni labore suscipit
                     praesentium!
                 </p>
@@ -31,7 +31,7 @@
             </div>
         </section>
     </section>
-    <section class="flex justify-center items-center py-10 px-10">
+    <section class="flex justify-center items-center py-20 px-10">
         <div class="clients w-full">
             <ul>
                 <li>
@@ -51,5 +51,66 @@
                 </li>
             </ul>
         </div>
+    </section>
+    <section class="flex flex-col justify-center items-center gap-20">
+        <section class="flex flex-col justify-center items-center gap-5">
+            <h1 class="text-4xl font-semibold">Keunggulan Kami</h1>
+            <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-lg leading-normal text-slate-400">
+                Dengan beragam pilihan yang disesuaikan dengan kebutuhan
+                Anda, kami menyediakan solusi yang inovatif dan berkualitas untuk memenuhi kebutuhan Anda.
+            </p>
+        </section>
+        <section class="w-full">
+            <ul class="flex justify-center items-center flex-wrap gap-16 lg:gap-10">
+                <li class="w-[20rem] group flex flex-col items-center justify-center gap-6">
+                    <div
+                        class="bg-transparent border border-black group-hover:bg-black transition-all duration-500 ease-in-out p-5 rounded-[50%]">
+                        <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                            <path
+                                d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z">
+                            </path>
+                            <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col justify-center items-center text-center gap-3">
+                        <h2 class="text-2xl font-medium">Mutu cetak yang terjamin</h2>
+                        <p class="text-sm text-slate-400">Cetak berkualitas, dijamin kualitasnya dan dapat diandalkan</p>
+                    </div>
+                </li>
+                <li class="group w-[20rem] flex flex-col items-center justify-center gap-6">
+                    <div
+                        class="bg-transparent border border-black group-hover:bg-black transition-all duration-500 ease-in-out p-5 rounded-[50%]">
+                        <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                            <path
+                                d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z">
+                            </path>
+                            <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col justify-center items-center text-center gap-3">
+                        <h2 class="text-2xl font-medium">Harga kompetitif</h2>
+                        <p class="text-sm text-slate-400">Percetakan dengan biaya yang bersaing dan kualitas terjaga</p>
+                    </div>
+                </li>
+                <li class="group w-[20rem] flex flex-col items-center justify-center gap-6">
+                    <div
+                        class="bg-transparent border border-black group-hover:bg-black transition-all duration-500 ease-in-out p-5 rounded-[50%]">
+                        <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                            <path
+                                d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z">
+                            </path>
+                            <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col justify-center items-center text-center gap-3">
+                        <h2 class="text-2xl font-medium">Pengiriman cepat & aman</h2>
+                        <p class="text-sm text-slate-400">Pengiriman dengan efisien dan aman, tepat waktu</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </section>
 @endsection
