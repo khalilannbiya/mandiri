@@ -31,4 +31,25 @@
             </div>
         </section>
     </section>
+    <section class="flex justify-center items-center py-10 px-10">
+        <div class="clients w-full">
+            <ul>
+                <li>
+                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
+                </li>
+                <li>
+                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
+                </li>
+                <li>
+                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
+                </li>
+                <li>
+                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
+                </li>
+                <li>
+                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
 @endsection
