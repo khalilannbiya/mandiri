@@ -27,3 +27,40 @@
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff4e4",endColorstr="#f0f6ee",GradientType=1);
 }
+
+.clients {
+    font-size: 15px;
+    padding-block: 8px;
+    /* border-block: 1px solid; */
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+}
+
+.clients ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    animation: scroll 20s linear infinite;
+}
+
+.clients:hover ul {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
