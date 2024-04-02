@@ -26,9 +26,9 @@ class FrontendController extends Controller
          * diurutkan berdasarkan tanggal pembuatan dari yang terbaru ke yang paling lama,
          * dan dibatasi hanya 10 data saja.
          */
-        $products = Product::with(['productGalleries'])->latest()->limit(10)->get();
+        // $products = Product::with(['productGalleries'])->latest()->limit(10)->get();
 
-        return view('pages.frontend.index', compact('products'));
+        return view('pages.frontend.home');
     }
 
     public function details(Request $request, string $slug)
