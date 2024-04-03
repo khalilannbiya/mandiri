@@ -53,7 +53,9 @@ Route::middleware([
         Route::resource('user', UserController::class)->only([
             'index', 'edit', 'update', 'destroy'
         ]);
-        Route::resource('category', CategoryController::class);
+        Route::resource('category', CategoryController::class)->only([
+            'index', 'create', 'store', 'edit', 'update', 'destroy'
+        ]);
         Route::get('/category/{slug}/products', [CategoryController::class, 'showByCategory'])->name('category.show-by-category');
     });
 });
