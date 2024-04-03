@@ -64,10 +64,10 @@ class ProductController extends Controller
             $data = $request->all();
             $data['slug'] = Str::slug($request->name);
 
-            Product::create($data);
+            $product = Product::create($data);
 
             DB::commit();
-            return redirect()->route('dashboard.product.index');
+            return redirect()->route('dashboard.product.gallery.index', $product->slug);
         } catch (\Exception $e) {
             DB::rollBack();
             return back()->withErrors(['error' => 'Failed to create product: ' . $e->getMessage()]);
