@@ -17,8 +17,8 @@
                     Kualitasmu
                 </h1>
                 <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-xl leading-normal">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, dolor qui magni labore suscipit
-                    praesentium!
+                    Dengan keahlian dan teknologi terkini, kami siap memberikan pengalaman percetakan yang tak terlupakan
+                    dan memuaskan. Selamat datang di dunia cetak yang menginspirasi dan berkualitas!
                 </p>
                 <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
                     data-ripple-light="true"
@@ -112,5 +112,31 @@
                 </li>
             </ul>
         </section>
+    </section>
+    <section class="flex flex-col lg:flex-row justify-center items-center py-28 gap-10 md:gap-16">
+        <div class="grid gap-6">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <img class="h-[14rem] w-[40rem] object-cover object-center rounded-lg hidden md:block"
+                        src="{{ asset('assets/images/aboutus-2.jpg') }}" alt="">
+                </div>
+                <div>
+                    <img class="h-[14rem] w-[40rem] object-cover object-center rounded-lg hidden md:block"
+                        src="{{ asset('assets/images/aboutus-3.jpg') }}" alt="">
+                </div>
+            </div>
+            <div>
+                <img class="h-[15rem] w-full lg:w-[40rem] object-cover object-center block md:hidden lg:block rounded-lg"
+                    src="{{ asset('assets/images/aboutus-1.jpg') }}" alt="">
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center lg:items-start gap-5 md:gap-10">
+            <h1 class="text-4xl font-semibold text-center lg:text-left">About Us</h1>
+            <p class="text-sm leading-normal text-center lg:text-left text-slate-400">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas aut enim alias nobis maiores nihil nesciunt
+                id corporis autem facere iure hic doloremque eos voluptas quisquam earum in, rem, ab eligendi? Ipsum magnam
+                architecto aliquid?
+            </p>
+        </div>
     </section>
 @endsection
