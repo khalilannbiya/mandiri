@@ -2,17 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
-use Midtrans\Snap;
-use App\Models\Cart;
-use Midtrans\Config;
 use App\Models\Product;
 use App\Models\Category;
-use App\Models\Transaction;
 use Illuminate\Http\Request;
-use App\Models\TransactionItem;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\CheckoutRequest;
 
 class FrontendController extends Controller
 {
@@ -37,15 +29,6 @@ class FrontendController extends Controller
         $product = Product::with(['category', 'productGalleries'])->where('slug', $slug)->firstOrFail();
         $category = $product->category;
         return view('pages.frontend.product-detail', compact('product', 'categories', 'category'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function catalog(Product $product)
-    {
-        $products = Product::with(['productGallery'])->latest()->get();
-        return view('pages.frontend.catalog', compact('products'));
     }
 
     /**

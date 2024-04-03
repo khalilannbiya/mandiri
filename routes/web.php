@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [FrontendController::class, 'index'])->name('index');
-
-Route::get('/catalog', [FrontendController::class, 'catalog'])->name('catalog');
+Route::get('/', [FrontendController::class, 'index'])->middleware('userRoleAutoLogout')->name('index');
 
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 
@@ -35,10 +33,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->name('dashboard.')->prefix('dashboard')->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('index');
 
     // Route yang hanya boleh di akses jika role usernya adalah ADMIN
     Route::middleware(['admin'])->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('index');
         Route::resource('product', ProductController::class)->only([
             'index', 'create', 'store', 'update', 'destroy'
         ]);
