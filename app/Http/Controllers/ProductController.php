@@ -23,6 +23,7 @@ class ProductController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
+                    <div class="flex">
                         <a class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded shadow-lg" href="' . route('dashboard.product.gallery.index', $item->slug) . '">
                             Gallery
                         </a>
@@ -33,6 +34,7 @@ class ProductController extends Controller
                         <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
                         ' . method_field('delete') . csrf_field() . '
                         </form>
+                    </div>
                     ';
                 })
                 ->editColumn('price', function ($item) {

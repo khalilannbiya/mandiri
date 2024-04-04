@@ -11,19 +11,28 @@
             // AJAX Datatable
 
             var datatable = $('#crudTable').DataTable({
-                ajax:{
-                    url:'{!! url()->current() !!}'
+                ajax: {
+                    url: '{!! url()->current() !!}'
                 },
-                columns:[
-                    {data:'id', name:'id', width:'5%'},
-                    {data:'name', name:'name'},
-                    {data:'price', name:'price'},
+                columns: [{
+                        data: 'id',
+                        name: 'id',
+                        width: '5%'
+                    },
                     {
-                        data:'action',
-                        name:'action',
-                        orderable:false,
-                        searchable:false,
-                        width:'25%'
+                        data: 'name',
+                        name: 'name'
+                    },
+                    {
+                        data: 'price',
+                        name: 'price'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false,
+                        width: '25%'
                     }
                 ]
             });
@@ -38,7 +47,7 @@
                     Tambah Produk</a>
             </div>
             <div class="shadow overflow-hidden sm-rounded-md">
-                <div class="px-4 py-5 bg-white sm:p-6">
+                <div class="px-4 py-5 bg-white sm:p-6 overflow-auto">
                     <table id="crudTable">
                         <thead>
                             <tr>
