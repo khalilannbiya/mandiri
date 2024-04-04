@@ -1,8 +1,8 @@
 <header class="">
     {{-- -- Navbar Before Login -- --}}
-    <nav id="navbar" class="z-[999] fixed w-full">
+    <nav id="navbar" class="bg-white z-[999] fixed w-full">
         <div
-            class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-2">
+            class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-4">
             <div>
                 <a href="{{ route('index') }}">
                     <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]" src="{{ asset('frontend/images/content/logo.png') }}"
@@ -30,7 +30,7 @@
                         <label for="default-search"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative flex justify-end gap-2">
-                            <svg class="w-4 h-4 absolute top-[10px] left-[20px] sm:left-[15px] text-white"
+                            <svg class="w-4 h-4 absolute top-[10px] left-[30px] sm:left-[15px] text-white"
                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -40,7 +40,7 @@
                                 class="block w-[70%] sm:w-full p-2 pl-9 sm:pl-11 text-sm text-white placeholder:text-white border border-white rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Cari Produk..." />
                             <button type="submit"
-                                class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                                class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Cari</button>
                         </div>
                     </form>
                 </li>
@@ -49,16 +49,16 @@
                 <form action="{{ route('products') }}" method="GET">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div class="relative flex justify-end gap-2">
-                        <svg class="w-4 h-4 lg:w-[14px] absolute top-[10px] lg:left-[10px] xl:left-[55px] text-gray-500"
+                        <svg class="w-4 h-4 lg:w-[14px] absolute top-[10px] lg:left-[10px] xl:left-[72px] text-gray-500"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                         <input type="text" name="keyword" id="default-search"
-                            class="block lg:w-[75%] xl:w-[60%] p-2 pl-8 text-sm border border-slate-600 rounded-lg bg-transparent focus:ring-primary focus:border-primary"
+                            class="block lg:w-[230px] xl:w-[190px] p-2 pl-8 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black"
                             placeholder="Cari Produk..." />
                         <button type="submit"
-                            class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                            class="text-white hover:text-black bg-black hover:bg-transparent border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium rounded-lg text-sm px-4 py-2">Cari</button>
                     </div>
                 </form>
             </div>
@@ -92,19 +92,16 @@
                         "duration-500",
                         "shadow-lg",
                         "bg-champagne",
-                        "backdrop-blur"
                     );
                     navbar.classList.remove("bg-transparent");
                 } else {
                     navbar.classList.add(
                         "transition-all",
                         "duration-500",
-                        "bg-transparent"
                     );
                     navbar.classList.remove(
                         "shadow-lg",
                         "bg-champagne",
-                        "backdrop-blur"
                     );
                 }
             });
