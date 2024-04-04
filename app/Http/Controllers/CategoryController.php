@@ -21,6 +21,7 @@ class CategoryController extends Controller
             $query = Category::all();
             return DataTables::of($query)->addColumn('action', function ($item) {
                 return '
+                <div class="flex">
                     <a class="bg-green-500 hover:bg-green-700 mb-2 text-white font-bold py-1 px-3 ml-3 rounded shadow-lg" href="' . route('dashboard.category.show-by-category', $item->slug) . '">
                          Products
                     </a>
@@ -31,6 +32,7 @@ class CategoryController extends Controller
                     <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
                     ' . method_field('delete') . csrf_field() . '
                     </form>
+                </div>
                 ';
             })
                 ->rawColumns(['action'])
@@ -125,6 +127,7 @@ class CategoryController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
+                    <div class="flex">
                         <a class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded shadow-lg" href="' . route('dashboard.product.gallery.index', $item->id) . '">
                             Gallery
                         </a>
@@ -135,6 +138,7 @@ class CategoryController extends Controller
                         <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
                         ' . method_field('delete') . csrf_field() . '
                         </form>
+                    </div>
                     ';
                 })
                 ->editColumn('price', function ($item) {

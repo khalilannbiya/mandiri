@@ -10,18 +10,24 @@
             // AJAX Datatable
 
             var datatable = $('#crudTable').DataTable({
-                ajax:{
-                    url:'{!! url()->current() !!}'
+                ajax: {
+                    url: '{!! url()->current() !!}'
                 },
-                columns:[
-                    {data:'id', name:'id', width:'5%'},
-                    {data:'url', name:'url'},
+                columns: [{
+                        data: 'id',
+                        name: 'id',
+                        width: '5%'
+                    },
                     {
-                        data:'action',
-                        name:'action',
-                        orderable:false,
-                        searchable:false,
-                        width:'25%'
+                        data: 'url',
+                        name: 'url'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false,
+                        width: '25%'
                     }
                 ]
             });
@@ -36,7 +42,7 @@
                     Upload Photos</a>
             </div>
             <div class="shadow overflow-hidden sm-rounded-md">
-                <div class="px-4 py-5 bg-white sm:p-6">
+                <div class="px-4 py-5 bg-white sm:p-6 overflow-auto">
                     <table id="crudTable">
                         <thead>
                             <tr>
