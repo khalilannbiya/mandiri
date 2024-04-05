@@ -34,7 +34,7 @@
     @include('components.frontend.navbar')
 
     {{-- Main Content --}}
-    <main class="max-w-7xl mx-auto px-4">
+    <main class="mx-auto px-4">
         @yield('content')
     </main>
 
