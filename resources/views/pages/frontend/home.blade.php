@@ -244,20 +244,23 @@
     </section>
     <section class="py-28 flex justify-center items-center mx-auto">
         <section class="max-w-7xl flex flex-col lg:flex-row justify-center items-center px-4 gap-10 md:gap-16">
-            <section class="grid gap-6">
+            <section class="grid gap-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <img class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
-                            src="{{ asset('assets/images/aboutus-2.jpg') }}" alt="">
+                        <img loading="lazy"
+                            class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
+                            src="{{ asset('assets/images/aboutus-2.webp') }}" alt="Gambar Alat Percetakan">
                     </div>
                     <div>
-                        <img class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
-                            src="{{ asset('assets/images/aboutus-3.jpg') }}" alt="">
+                        <img loading="lazy"
+                            class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
+                            src="{{ asset('assets/images/aboutus-3.webp') }}" alt="Gambar Alat Percetakan">
                     </div>
                 </div>
                 <div>
-                    <img class="h-[15rem] w-full lg:w-[40rem] object-cover object-center block md:hidden lg:block rounded-lg"
-                        src="{{ asset('assets/images/aboutus-1.jpg') }}" alt="">
+                    <img loading="lazy"
+                        class="h-[15rem] w-full lg:w-[40rem] object-cover object-center block md:hidden lg:block rounded-lg"
+                        src="{{ asset('assets/images/aboutus-1.webp') }}" alt="Gambar Alat Percetakan">
                 </div>
             </section>
             <section class="flex flex-col justify-center items-center lg:items-start gap-5 md:gap-10">
@@ -269,6 +272,9 @@
                     magnam
                     architecto aliquid?
                 </p>
+                <button type="submit"
+                    class="text-white hover:text-black bg-black hover:bg-transparent border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium text-sm px-4 py-2">Lihat
+                    Selengkapnya</button>
             </section>
         </section>
     </section>
