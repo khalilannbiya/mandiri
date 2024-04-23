@@ -55,5 +55,8 @@ Route::middleware([
             'index', 'create', 'store', 'edit', 'update', 'destroy'
         ]);
         Route::get('/category/{slug}/products', [CategoryController::class, 'showByCategory'])->name('category.show-by-category');
+
+        Route::get('/info', [DashboardController::class, 'editInfo'])->name('info.edit');
+        Route::put('/info', [DashboardController::class, 'updateInfo'])->name('info.update');
     });
 });
