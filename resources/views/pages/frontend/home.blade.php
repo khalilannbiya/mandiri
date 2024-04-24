@@ -34,54 +34,7 @@
             </div>
         </section>
     </section>
-    <section class="max-w-7xl mx-auto flex justify-center items-center py-20">
-        <div class="clients w-full">
-            <ul class="flex justify-between gap-[10rem]">
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-1.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-2.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-3.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-4.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-5.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-6.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-7.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-8.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-9.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-10.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-11.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-12.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-13.png') }}" alt="">
-                </li>
-                <li class="mx-1">
-                    <img class="w-[8rem]" src="{{ asset('assets/images/client-14.png') }}" alt="">
-                </li>
-            </ul>
-        </div>
-    </section>
+    @include('components.frontend.client-infinite-scrolling')
     <section class="flex justify-center items-center">
         <section class="max-w-7xl flex flex-col justify-center items-center gap-20">
             <section class="flex flex-col justify-center items-center gap-5">
@@ -130,8 +83,8 @@
                     <li class="group w-[20rem] flex flex-col items-center justify-center gap-6">
                         <div
                             class="bg-transparent border border-black group-hover:bg-black transition-all duration-500 ease-in-out p-5 rounded-[50%]">
-                            <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+                            <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
                                 <path
                                     d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z">
                                 </path>
@@ -178,11 +131,11 @@
                         </div>
                         <div class="p-6 pt-0 flex justify-between items-center">
                             <a href="" class="underline">Detail</a>
-                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!"
-                                target="_blank" data-ripple-light="true"
+                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
+                                data-ripple-light="true"
                                 class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    style="fill: white;transform: ;msFilter:;">
                                     <path
                                         d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
                                     </path>
@@ -211,8 +164,8 @@
                         </div>
                         <div class="p-6 pt-0 flex justify-between items-center">
                             <a href="" class="underline">Detail</a>
-                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!"
-                                target="_blank" data-ripple-light="true"
+                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
+                                data-ripple-light="true"
                                 class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;">
@@ -307,3 +260,34 @@
         </section>
     </section>
 @endsection
+
+@push('script')
+    <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+        // If a user hasn't opted in for recuded motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                // add data-animated="true" to every `.scroller` on the page
+                scroller.setAttribute("data-animated", true);
+
+                // Make an array from the elements within `.scroller-inner`
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // For each item in the array, clone it
+                // add aria-hidden to it
+                // add it into the `.scroller-inner`
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+@endpush
