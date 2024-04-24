@@ -34,27 +34,7 @@
             </div>
         </section>
     </section>
-    <section class="max-w-7xl mx-auto flex justify-center items-center py-20 px-10">
-        <div class="clients w-full">
-            <ul>
-                <li>
-                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
-                </li>
-                <li>
-                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
-                </li>
-                <li>
-                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
-                </li>
-                <li>
-                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
-                </li>
-                <li>
-                    <img class="w-[8rem]" src="{{ asset('assets/images/logo-client') }}" alt="">
-                </li>
-            </ul>
-        </div>
-    </section>
+    @include('components.frontend.client-infinite-scrolling')
     <section class="flex justify-center items-center">
         <section class="max-w-7xl flex flex-col justify-center items-center gap-20">
             <section class="flex flex-col justify-center items-center gap-5">
@@ -96,7 +76,8 @@
                         </div>
                         <div class="flex flex-col justify-center items-center text-center gap-3">
                             <h2 class="text-2xl font-medium">Harga kompetitif</h2>
-                            <p class="text-sm text-slate-400">Percetakan dengan biaya yang bersaing dan kualitas terjaga</p>
+                            <p class="text-sm text-slate-400">Percetakan dengan biaya yang bersaing dan kualitas terjaga
+                            </p>
                         </div>
                     </li>
                     <li class="group w-[20rem] flex flex-col items-center justify-center gap-6">
@@ -183,8 +164,8 @@
                         </div>
                         <div class="p-6 pt-0 flex justify-between items-center">
                             <a href="" class="underline">Detail</a>
-                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!"
-                                target="_blank" data-ripple-light="true"
+                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
+                                data-ripple-light="true"
                                 class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-slate-400 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;">
@@ -279,3 +260,34 @@
         </section>
     </section>
 @endsection
+
+@push('script')
+    <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+        // If a user hasn't opted in for recuded motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                // add data-animated="true" to every `.scroller` on the page
+                scroller.setAttribute("data-animated", true);
+
+                // Make an array from the elements within `.scroller-inner`
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // For each item in the array, clone it
+                // add aria-hidden to it
+                // add it into the `.scroller-inner`
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+@endpush
