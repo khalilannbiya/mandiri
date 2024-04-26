@@ -5,7 +5,8 @@
             class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-4">
             <div>
                 <a href="{{ route('index') }}">
-                    <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]" src="{{ asset('frontend/images/content/logo.png') }}"
+                    <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]"
+                        src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
                         alt="Logo Percetakan Mandiri Print" />
                 </a>
             </div>

@@ -6,7 +6,9 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard.index') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <img class="block h-9 w-auto"
+                            src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
+                            alt="Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi">
                     </a>
                 </div>
 

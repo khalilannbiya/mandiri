@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -21,9 +22,8 @@ class DashboardController extends Controller
 
     public function updateInfo(Request $request)
     {
-        $info = WebsiteInfo::first();
-
         try {
+            $info = WebsiteInfo::first();
             $request->validate([
                 'logo' => 'required|image|max:2048',
             ]);
@@ -35,6 +35,9 @@ class DashboardController extends Controller
                 $path = $logo->storePublicly("logo", "public");
 
                 if ($info) {
+                    // Deleting unused files
+                    Storage::disk('public')->delete($info->logo);
+
                     $info->update([
                         'logo' => $path
                     ]);
