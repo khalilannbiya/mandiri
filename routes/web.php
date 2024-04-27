@@ -8,6 +8,8 @@ use App\Http\Controllers\ProductGalleryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+use function Ramsey\Uuid\v1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontendController::class, 'index'])->middleware('userRoleAutoLogout')->name('index');
+
+Route::view('/about-us', 'pages.frontend.about-us');
 
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 
