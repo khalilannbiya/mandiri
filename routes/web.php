@@ -23,7 +23,7 @@ use function Ramsey\Uuid\v1;
 
 Route::get('/', [FrontendController::class, 'index'])->middleware('userRoleAutoLogout')->name('index');
 
-Route::view('/about-us', 'pages.frontend.about-us');
+Route::view('/about-us', 'pages.frontend.about-us')->name('about-us');
 
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 

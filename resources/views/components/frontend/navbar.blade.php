@@ -22,8 +22,8 @@
                         Kami</a>
                 </li>
                 <li>
-                    <a href="#about"
-                        class="transition-all text-white lg:text-black hover:text-black duration-500 md:text-lg lg:text-sm ">Tentang
+                    <a href="{{ route('about-us') }}"
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['about-us']) ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Tentang
                         Kami</a>
                 </li>
                 <li class="block lg:hidden">
