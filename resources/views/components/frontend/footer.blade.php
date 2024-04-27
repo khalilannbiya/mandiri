@@ -35,7 +35,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline py-1 flex items-center text-[13px] gap-2">
+                            <a href="mailto:mandiripercetakan93@gmail.com"
+                                class="hover:underline py-1 flex items-center text-[13px] gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                     <path
@@ -51,13 +52,15 @@
                     <h5 class="text-lg font-semibold mb-2 relative">Telusuri</h5>
                     <ul class="h-0 md:h-auto">
                         <li>
-                            <a href="#" class="hover:underline py-1 block text-[13px]">Beranda</a>
+                            <a href="{{ route('index') }}" class="hover:underline py-1 block text-[13px]">Beranda</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline py-1 block text-[13px]">Produk Kami</a>
+                            <a href="{{ route('products') }}" class="hover:underline py-1 block text-[13px]">Produk
+                                Kami</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline py-1 block text-[13px]">Tentang Kami</a>
+                            <a href="{{ route('about-us') }}" class="hover:underline py-1 block text-[13px]">Tentang
+                                Kami</a>
                         </li>
                     </ul>
                 </div>

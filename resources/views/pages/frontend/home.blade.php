@@ -22,8 +22,7 @@
                         terlupakan
                         dan memuaskan. Selamat datang di dunia cetak yang menginspirasi dan berkualitas!
                     </p>
-                    <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
-                        data-ripple-light="true"
+                    <a href="{{ route('products') }}"
                         class="flex w-[10rem] items-center justify-center px-4 gap-3 select-none bg-transparent py-3 text-center align-middle text-sm font-bold text-black hover:bg-black hover:text-white transition-all duration-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none border-[1.5px] border-black">
                         Lihat Produk
                     </a>
@@ -214,8 +213,7 @@
                     </article>
                 </section>
                 <section class="flex justify-center items-center">
-                    <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
-                        data-ripple-light="true"
+                    <a href="{{ route('products') }}"
                         class="flex w-[10rem] items-center justify-center px-4 gap-3 select-none bg-transparent py-3 text-center align-middle text-sm font-bold text-black hover:bg-black hover:text-white transition-all duration-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none border-[1.5px] border-black">
                         Lihat Produk
                     </a>
@@ -229,33 +227,31 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <img loading="lazy"
-                            class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
+                            class="h-[12rem] w-[40rem] object-cover object-center rounded-lg hidden md:block"
                             src="{{ asset('assets/images/aboutus-2.webp') }}" alt="Gambar Alat Percetakan">
                     </div>
                     <div>
                         <img loading="lazy"
-                            class="h-[14rem] w-[35rem] object-cover object-center rounded-lg hidden md:block"
+                            class="h-[12rem] w-[40rem] object-cover object-center rounded-lg hidden md:block"
                             src="{{ asset('assets/images/aboutus-3.webp') }}" alt="Gambar Alat Percetakan">
                     </div>
                 </div>
                 <div>
                     <img loading="lazy"
-                        class="h-[15rem] w-full lg:w-[40rem] object-cover object-center block md:hidden lg:block rounded-lg"
+                        class="h-[12rem] w-full lg:w-[40rem] object-cover object-center block md:hidden lg:block rounded-lg"
                         src="{{ asset('assets/images/aboutus-1.webp') }}" alt="Gambar Alat Percetakan">
                 </div>
             </section>
             <section class="flex flex-col justify-center items-center lg:items-start gap-5 md:gap-10">
                 <h1 class="text-4xl font-semibold text-center lg:text-left">Tentang Kami</h1>
                 <p class="text-sm leading-normal text-center lg:text-left text-slate-400">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas aut enim alias nobis maiores nihil
-                    nesciunt
-                    id corporis autem facere iure hic doloremque eos voluptas quisquam earum in, rem, ab eligendi? Ipsum
-                    magnam
-                    architecto aliquid?
+                    Mandiri Printing adalah sebuah toko percetakan yang berlokasi di daerah PS. Benhil, Jakarta Pusat,
+                    memiliki sejarah yang menarik. Toko ini sebenarnya merupakan anak perusahaan dari Percetakan CV. Jasa
+                    Pratama, yang telah berdiri selama lebih dari 30 tahun dan memiliki reputasi yang baik di Jakarta.
                 </p>
-                <button type="submit"
+                <a href="{{ route('about-us') }}"
                     class="text-white hover:text-black bg-black hover:bg-transparent border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium text-sm px-4 py-2">Lihat
-                    Selengkapnya</button>
+                    Selengkapnya</a>
             </section>
         </section>
     </section>
