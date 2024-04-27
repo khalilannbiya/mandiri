@@ -2,7 +2,7 @@
 <section class="">
     <div class="border-t border-b border-gray-200 py-12 mt-16 px-4">
         <div class="flex justify-start md:justify-center mb-8">
-            <img class="w-[10rem] sm:w-[12rem] md:w-[10rem] lg:w-[12rem]"
+            <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
                 src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('frontend/images/content/logo.png') }}"
                 alt="Luxspace | Fulfill your house with beautiful furniture" />
         </div>
