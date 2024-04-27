@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <img src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
+            <img class="w-1/2 sm:w-[12rem] md:w-[10rem] lg:w-[14rem]"
+                src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
                 alt="Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
         </x-slot>
 
