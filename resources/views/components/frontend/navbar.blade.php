@@ -3,11 +3,11 @@
     <nav id="navbar" class="bg-white z-[999] fixed w-full">
         <div
             class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-4">
-            <div>
+            <div class="w-1/3">
                 <a href="{{ route('index') }}">
-                    <img class="w-[5rem] md:w-[10rem] lg:w-[10rem]"
+                    <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
                         src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
-                        alt="Logo Percetakan Mandiri Print" />
+                        alt="Logo Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
                 </a>
             </div>
             <ul id="navList"
@@ -46,17 +46,12 @@
                     </form>
                 </li>
             </ul>
-            <div class="w-1/3 lg:w-[40%] hidden lg:block">
+            <div class="w-1/3 lg:w-[30%] hidden lg:block">
                 <form action="{{ route('products') }}" method="GET">
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div class="relative flex justify-end gap-2">
-                        <svg class="w-4 h-4 lg:w-[14px] absolute top-[10px] lg:left-[10px] xl:left-[72px] text-gray-500"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
                         <input type="text" name="keyword" id="default-search"
-                            class="block lg:w-[230px] xl:w-[190px] p-2 pl-8 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black"
+                            class="block lg:w-[180px] xl:w-[190px] p-2 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black"
                             placeholder="Cari Produk..." />
                         <button type="submit"
                             class="text-white hover:text-black bg-black hover:bg-transparent border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium rounded-lg text-sm px-4 py-2">Cari</button>

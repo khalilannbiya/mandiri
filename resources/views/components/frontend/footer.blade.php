@@ -1,9 +1,10 @@
 <!-- START: ASIDE MENU -->
 <section class="">
     <div class="border-t border-b border-gray-200 py-12 mt-16 px-4">
-        <div class="flex justify-center mb-8">
-            <img src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('frontend/images/content/logo.png') }}"
-                alt="Luxspace | Fulfill your house with beautiful furniture" />
+        <div class="flex justify-start md:justify-center mb-8">
+            <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
+                src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
+                alt="Logo Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
         </div>
         <aside class="container mx-auto">
             <div class="flex flex-wrap -mx-4 justify-around">
