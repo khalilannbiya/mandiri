@@ -7,7 +7,7 @@
                 <a href="{{ route('index') }}">
                     <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
                         src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
-                        alt="Logo Percetakan Mandiri Print" />
+                        alt="Logo Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
                 </a>
             </div>
             <ul id="navList"
