@@ -23,7 +23,7 @@
                     <h5 class="text-lg font-semibold mb-2 relative">Hubungi Kami</h5>
                     <ul class="h-0 md:h-auto">
                         <li>
-                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20saya%20ingin%20bertanya?"
+                            <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20percetakan%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
                                 target="_blank" class="hover:underline py-1 flex items-center text-[13px] gap-2">
                                 <svg class="" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">

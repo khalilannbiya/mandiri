@@ -50,7 +50,7 @@
                 @include('components.frontend.card-product')
 
             @empty
-                <h2>belum ada product</h2>
+                @include('components.frontend.product-not-found')
             @endforelse
         </section>
     </section>
