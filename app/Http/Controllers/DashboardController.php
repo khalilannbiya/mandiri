@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Product;
+use App\Models\Category;
 use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,7 +14,13 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        $product = Product::count();
+        $category = Category::count();
+        $user = User::count();
+        $products = Product::with('category')->get();
+        $categories = Category::all();
+        $users = User::all();
+        return view('dashboard', compact('product', 'category', 'user', 'products', 'categories', 'users'));
     }
 
     public function editInfo()
