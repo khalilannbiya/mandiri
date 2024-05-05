@@ -17,9 +17,9 @@ class DashboardController extends Controller
         $product = Product::count();
         $category = Category::count();
         $user = User::count();
-        $products = Product::with('category')->get();
-        $categories = Category::all();
-        $users = User::all();
+        $products = Product::with('category')->limit(5)->latest()->get();
+        $categories = Category::limit(5)->latest()->get();
+        $users = User::limit(5)->latest()->get();
         return view('dashboard', compact('product', 'category', 'user', 'products', 'categories', 'users'));
     }
 
@@ -34,18 +34,41 @@ class DashboardController extends Controller
         try {
             $info = WebsiteInfo::first();
             $request->validate([
-                'logo' => 'required|image|max:2048',
+                'logo' => 'image|max:2048',
+                'favicon' => 'image|max:2048'
             ]);
 
             DB::beginTransaction();
 
-            $logo = $request->file('logo');
+            if ($request->hasFile('favicon')) {
+                $favicon = $request->file('favicon');
+                $path = $favicon->storePublicly("logo", "public");
+
+                if ($info) {
+                    // Deleting unused files
+                    if ($info->favicon) {
+                        Storage::disk('public')->delete($info->favicon);
+                    }
+
+                    $info->update([
+                        'favicon' => $path
+                    ]);
+                } else {
+                    WebsiteInfo::create([
+                        'favicon' => $path
+                    ]);
+                }
+            }
+
             if ($request->hasFile('logo')) {
+                $logo = $request->file('logo');
                 $path = $logo->storePublicly("logo", "public");
 
                 if ($info) {
                     // Deleting unused files
-                    Storage::disk('public')->delete($info->logo);
+                    if ($info->logo) {
+                        Storage::disk('public')->delete($info->logo);
+                    }
 
                     $info->update([
                         'logo' => $path

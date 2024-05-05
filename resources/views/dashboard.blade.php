@@ -62,7 +62,7 @@
                 <div class="flex flex-wrap justify-between items-center gap-6 mb-8 w-full">
                     <div class="w-full md:w-[45%] mb-8 overflow-hidden rounded-lg shadow-xs">
                         <h4 class="mb-4 text-lg font-semibold text-gray-900">
-                            Data Produk
+                            Data Produk Terbaru
                         </h4>
                         <div class="w-full overflow-x-auto">
                             <table class="w-full whitespace-no-wrap">
@@ -105,7 +105,7 @@
 
                     <div class="w-full md:w-[45%] mb-8 overflow-hidden rounded-lg shadow-xs">
                         <h4 class="mb-4 text-lg font-semibold text-gray-900">
-                            Data Kategori
+                            Data Kategori Terbaru
                         </h4>
                         <div class="w-full overflow-x-auto">
                             <table class="w-full whitespace-no-wrap">
@@ -139,7 +139,7 @@
                     </div>
                     <div class="w-full md:w-[45%] mb-8 overflow-hidden rounded-lg shadow-xs">
                         <h4 class="mb-4 text-lg font-semibold text-gray-900">
-                            Data User
+                            Data User Terbaru
                         </h4>
                         <div class="w-full overflow-x-auto">
                             <table class="w-full whitespace-no-wrap">
