@@ -11,5 +11,5 @@ class WebsiteInfo extends Model
      *
      * @var array
      */
-    protected $fillable = ['logo'];
+    protected $fillable = ['logo', 'favicon'];
 }

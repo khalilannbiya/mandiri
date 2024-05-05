@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('website_infos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('logo', 200)->nullable();
-            $table->timestamps();
+        Schema::table('website_infos', function (Blueprint $table) {
+            $table->string('favicon', 200)->after('logo')->nullable();
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('website_infos');
+        Schema::table('website_infos', function (Blueprint $table) {
+            $table->dropColumn('favicon');
+        });
     }
 };

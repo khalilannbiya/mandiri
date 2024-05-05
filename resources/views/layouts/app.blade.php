@@ -9,8 +9,10 @@
     <title>Percetakan Mandiri Print — Jasa Digital Printing & Percetakan Di Jakarta</title>
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" />
-    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.png') }}" />
+    <link rel="icon" type="image/png"
+        href="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/favicon.png') }}" />
+    <link rel="apple-touch-icon"
+        href="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/favicon.png') }}" />
 
     {{-- Google Font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com" />

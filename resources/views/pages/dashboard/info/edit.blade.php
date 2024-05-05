@@ -34,6 +34,16 @@
                     <button type="submit"
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">Ubah</button>
                 </form>
+                <img class="bg-slate-500 w-28 mt-5"
+                    src="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/default-image.png') }}"
+                    alt="Preview Favicon">
+                <form action="{{ route('dashboard.info.update') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="file" name="favicon" id="favicon" accept="image/*" placeholder="Ubah Favicon">
+                    <button type="submit"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">Ubah</button>
+                </form>
             </div>
         </div>
 </x-app-layout>
