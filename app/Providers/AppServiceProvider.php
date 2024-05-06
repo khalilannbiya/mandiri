@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer(['components.frontend.navbar', 'components.frontend.footer', 'navigation-menu', 'auth.login', 'auth.register', 'layouts.app', 'layouts.frontend'], function ($view) {
+        View::composer(['components.frontend.navbar', 'components.frontend.footer', 'navigation-menu', 'auth.login', 'auth.register', 'layouts.app', 'layouts.frontend', 'layouts.guest'], function ($view) {
             $info = WebsiteInfo::first();
             $view->with('info', $info);
         });
