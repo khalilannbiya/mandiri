@@ -69,6 +69,8 @@ class ProductController extends Controller
             $product = Product::create($data);
 
             DB::commit();
+
+            notify()->success('Sukses menambah produk!');
             return redirect()->route('dashboard.product.gallery.index', $product->slug);
         } catch (\Exception $e) {
             DB::rollBack();
@@ -110,6 +112,8 @@ class ProductController extends Controller
             $product->update($data);
 
             DB::commit();
+
+            notify()->success('Sukses mengubah produk!');
             return redirect()->route('dashboard.product.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -124,6 +128,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
+        notify()->success('Sukses menghapus produk!');
         return redirect()->route('dashboard.product.index');
     }
 }

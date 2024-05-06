@@ -58,6 +58,8 @@ class DashboardController extends Controller
                         'favicon' => $path
                     ]);
                 }
+
+                notify()->success('Sukses mengubah info!');
             }
 
             if ($request->hasFile('logo')) {
@@ -78,6 +80,8 @@ class DashboardController extends Controller
                         'logo' => $path
                     ]);
                 }
+
+                notify()->success('Sukses mengubah info!');
             }
 
             DB::commit();
