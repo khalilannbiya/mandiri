@@ -78,6 +78,7 @@ class UserController extends Controller
 
         $user->update($data);
 
+        notify()->success('Sukses mengubah user info!');
         return redirect()->route('dashboard.user.index');
     }
 
@@ -88,6 +89,7 @@ class UserController extends Controller
     {
         $user->delete();
 
+        notify()->success('Sukses menghapus user!');
         return redirect()->route('dashboard.user.index');
     }
 }
