@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
             colors: {
                 primary: '#94A3B8',
                 white: '#FFFFFF',
-                black: '#000000',
+                black: '#1e293b',
             },
             fontFamily: {
                 rubik: ['Rubik', ...defaultTheme.fontFamily.sans],
@@ -23,8 +23,5 @@ module.exports = {
         },
     },
 
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
-    ],
-}
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};

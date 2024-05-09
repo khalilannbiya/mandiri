@@ -9,22 +9,23 @@
         <aside class="container mx-auto">
             <div class="flex flex-wrap -mx-4 justify-around">
                 <div class="px-4 w-full md:w-3/12 mb-4 md:mb-0">
-                    <h5 class="text-lg font-semibold mb-2 relative">
+                    <h5 class="text-lg text-black font-semibold mb-2 relative">
                         Lokasi
                     </h5>
                     <a href="https://maps.app.goo.gl/CwXdt8hwW2ED9X4b9" class="hover:underline">
-                        <address class="text-[13px] capitalize">
+                        <address class="text-[13px] text-black capitalize">
                             pasar bendungan hilir lantai 1 AKS NO 18, RT.14/RW.1, Bend. Hilir, Kecamatan Tanah Abang,
                             JAKARTA, Daerah Khusus Ibukota Jakarta 10210
                         </address>
                     </a>
                 </div>
                 <div class="px-4 w-full md:w-4/12 lg:w-3/12 mb-4 md:mb-0 accordion">
-                    <h5 class="text-lg font-semibold mb-2 relative">Hubungi Kami</h5>
+                    <h5 class="text-lg text-black font-semibold mb-2 relative">Hubungi Kami</h5>
                     <ul class="h-0 md:h-auto">
                         <li>
                             <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20percetakan%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
-                                target="_blank" class="hover:underline py-1 flex items-center text-[13px] gap-2">
+                                target="_blank"
+                                class="hover:underline py-1 flex items-center text-[13px] text-black gap-2">
                                 <svg class="" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -36,7 +37,7 @@
                         </li>
                         <li>
                             <a href="mailto:mandiripercetakan93@gmail.com"
-                                class="hover:underline py-1 flex items-center text-[13px] gap-2">
+                                class="hover:underline py-1 flex items-center text-[13px] text-black gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                     <path
@@ -49,17 +50,20 @@
                     </ul>
                 </div>
                 <div class="px-4 w-full md:w-2/12 my-14 md:my-0 accordion">
-                    <h5 class="text-lg font-semibold mb-2 relative">Telusuri</h5>
+                    <h5 class="text-lg text-black font-semibold mb-2 relative">Telusuri</h5>
                     <ul class="h-0 md:h-auto">
                         <li>
-                            <a href="{{ route('index') }}" class="hover:underline py-1 block text-[13px]">Beranda</a>
+                            <a href="{{ route('index') }}"
+                                class="hover:underline py-1 block text-[13px] text-black">Beranda</a>
                         </li>
                         <li>
-                            <a href="{{ route('products') }}" class="hover:underline py-1 block text-[13px]">Produk
+                            <a href="{{ route('products') }}"
+                                class="hover:underline py-1 block text-[13px] text-black">Produk
                                 Kami</a>
                         </li>
                         <li>
-                            <a href="{{ route('about-us') }}" class="hover:underline py-1 block text-[13px]">Tentang
+                            <a href="{{ route('about-us') }}"
+                                class="hover:underline py-1 block text-[13px] text-black">Tentang
                                 Kami</a>
                         </li>
                     </ul>
@@ -72,8 +76,12 @@
 
 <!-- START: FOOTER -->
 <footer class="flex text-center px-4 py-8 justify-center">
-    <p class="text-sm">
-        Copyright {{ date('Y') }} • All Rights Reserved Mandiri Print by Do's Id
+    <p class="text-sm text-black">
+        Copyright {{ date('Y') }} • All Rights Reserved Mandiri Printing & Graphics by
+        <a class="text-red-300 underline"
+            href="https://api.whatsapp.com/send?phone=6282299231721&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
+            target="_blank">Do's
+            Id</a>
     </p>
 </footer>
 <!-- END: FOOTER -->

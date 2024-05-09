@@ -5,16 +5,16 @@
 @endsection
 
 @section('content')
-    <section class="pt-[54px] md:pt-[72px]">
+    <section class="pt-[60px] md:pt-[82px]">
         <div
             class="bg-gradient-hero aspect-square lg:aspect-auto h-[300px] w-full flex items-center justify-center rounded-lg">
             <div class="max-w-7xl flex flex-col items-center justify-center gap-4">
-                <h1 class="text-4xl font-bold text-center leading-normal">Semua Produk</h1>
+                <h1 class="text-4xl text-white font-bold text-center leading-normal">Semua Produk</h1>
                 <nav class="flex" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center justify-center flex-wrap space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="{{ route('index') }}"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-400">
+                                class="inline-flex items-center text-sm font-medium text-white hover:text-slate-300">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">
                                     <path
@@ -25,12 +25,12 @@
                         </li>
                         <li aria-current="page">
                             <div class="flex items-center">
-                                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                                <svg class="rtl:rotate-180 w-3 h-3 text-slate-300 mx-1" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2">Products</span>
+                                <span class="ms-1 text-sm font-medium text-slate-300 md:ms-2">Products</span>
                             </div>
                         </li>
                     </ol>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </section>
-    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 px-4">
+    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 md:py-24 px-4">
         <section class="w-full lg:w-[25%] xl-[20%] flex justify-center">
 
             {{-- Categories List --}}

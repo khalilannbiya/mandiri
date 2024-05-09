@@ -11,19 +11,19 @@
                 </a>
             </div>
             <ul id="navList"
-                class="fixed bg-slate-400 lg:ml-10 lg:static flex flex-col lg:flex-row justify-center items-center gap-7 md:gap-9 lg:gap-7 top-0 right-[-1000px] md:right-[-1000px] h-screen lg:h-auto w-full z-20 lg:z-0 bg-pewter-blue lg:bg-transparent lg:text-secondary font-semibold transition-all duration-1000">
+                class="fixed bg-[#F4F8FB] lg:ml-10 lg:static flex flex-col lg:flex-row justify-center items-center gap-7 md:gap-9 lg:gap-7 top-0 right-[-1000px] md:right-[-1000px] h-screen lg:h-auto w-full z-20 lg:z-0 bg-pewter-blue lg:bg-transparent lg:text-secondary font-semibold transition-all duration-1000">
                 <li>
                     <a href="{{ route('index') }}"
-                        class="transition-all duration-500 md:text-lg lg:text-sm {{ Route::current()->getName() == 'index' ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Beranda</a>
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ Route::current()->getName() == 'index' ? 'text-slate-400 lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Beranda</a>
                 </li>
                 <li>
                     <a href="{{ route('products') }}"
-                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['products', 'show-by-category', 'product-details']) ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Produk
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['products', 'show-by-category', 'product-details']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Produk
                         Kami</a>
                 </li>
                 <li>
                     <a href="{{ route('about-us') }}"
-                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['about-us']) ? 'text-black lg:text-primary' : 'text-white hover:text-black lg:text-black lg:hover:text-primary' }}">Tentang
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['about-us']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Tentang
                         Kami</a>
                 </li>
                 <li class="block lg:hidden">
@@ -31,17 +31,17 @@
                         <label for="default-search"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                         <div class="relative flex justify-end gap-2">
-                            <svg class="w-4 h-4 absolute top-[10px] left-[30px] sm:left-[15px] text-white"
+                            <svg class="w-4 h-4 absolute top-[10px] left-[30px] sm:left-[15px] text-black"
                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
                             <input type="text" name="keyword" id="default-search"
-                                class="block w-[70%] sm:w-full p-2 pl-9 sm:pl-11 text-sm text-white placeholder:text-white border border-white rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500"
+                                class="block w-[70%] sm:w-full p-2 pl-9 sm:pl-11 text-sm text-black placeholder:text-black border border-black rounded-lg bg-transparent focus:ring-black focus:border-black"
                                 placeholder="Cari Produk..." />
                             <button type="submit"
-                                class="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Cari</button>
+                                class="text-white bg-black hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-4 py-2">Cari</button>
                         </div>
                     </form>
                 </li>
@@ -51,17 +51,17 @@
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div class="relative flex justify-end gap-2">
                         <input type="text" name="keyword" id="default-search"
-                            class="block lg:w-[180px] xl:w-[190px] p-2 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black"
+                            class="block lg:w-[180px] xl:w-[190px] p-2 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black rounded-md"
                             placeholder="Cari Produk..." />
                         <button type="submit"
-                            class="text-white hover:text-black bg-black hover:bg-transparent border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium rounded-lg text-sm px-4 py-2">Cari</button>
+                            class="text-white bg-slate-800 hover:bg-slate-700 border border-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-800 transition-all duration-500 ease-in-out font-medium rounded-md text-sm px-4 py-2">Cari</button>
                     </div>
                 </form>
             </div>
-            <div class="absolute z-30 right-4 md:right-4 lg:hidden" id="toggle">
+            <div class="absolute z-30 right-4 md:right-4 lg:hidden cursor-pointer" id="toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" id="iconToggle"
                     class="icon icon-tabler icon-tabler-align-justified" width="27" height="27"
-                    viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round"
+                    viewBox="0 0 24 24" stroke-width="3" stroke="black" fill="none" stroke-linecap="round"
                     stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M4 6l16 0"></path>

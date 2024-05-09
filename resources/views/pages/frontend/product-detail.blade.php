@@ -9,12 +9,12 @@
         <div
             class="bg-gradient-hero aspect-square lg:aspect-auto h-[300px] w-full flex flex-col items-center justify-center rounded-lg">
             <div class="max-w-7xl flex flex-col items-center justify-center gap-4">
-                <h1 class="text-4xl font-bold text-center leading-normal">{{ $product->name }}</h1>
+                <h1 class="text-4xl text-white font-bold text-center leading-normal">{{ $product->name }}</h1>
                 <nav class="flex" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center justify-center flex-wrap space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="{{ route('index') }}"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-slate-400">
+                                class="inline-flex items-center text-sm font-medium text-white hover:text-slate-300">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">
                                     <path
@@ -25,23 +25,23 @@
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <svg class="rtl:rotate-180 w-3 h-3 text-gray-700 mx-1" aria-hidden="true"
+                                <svg class="rtl:rotate-180 w-3 h-3 text-slate-300 mx-1" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
                                 <a href="{{ route('show-by-category', $product->category->slug) }}"
-                                    class="ms-1 text-sm font-medium text-gray-700 hover:text-slate-400 md:ms-2">{{ $product->category->name }}</a>
+                                    class="ms-1 text-sm font-medium text-white hover:text-slate-300 md:ms-2">{{ $product->category->name }}</a>
                             </div>
                         </li>
                         <li aria-current="page">
                             <div class="flex items-center">
-                                <svg class="rtl:rotate-180 w-3 h-3 text-gray-700 mx-1" aria-hidden="true"
+                                <svg class="rtl:rotate-180 w-3 h-3 text-slate-300 mx-1" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2">{{ $product->name }}</span>
+                                <span class="ms-1 text-sm font-medium text-slate-300 md:ms-2">{{ $product->name }}</span>
                             </div>
                         </li>
                     </ol>
@@ -49,15 +49,15 @@
             </div>
         </div>
     </section>
-    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 px-4">
+    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 md:py-24 px-4">
         <section class="w-full lg:basis-1/4 flex justify-center">
 
             {{-- Categories List --}}
             @include('components.frontend.categories-list')
 
         </section>
-        <section class="w-full lg:basis-3/4 py-16 md:py-6 lg:py-10 flex flex-wrap justify-start items-center">
-            <div class="bg-primary w-full flex justify-center items-center rounded-lg">
+        <section class="w-full lg:basis-3/4 py-16 md:py-0 flex flex-wrap justify-start items-center">
+            <div class="bg-gradient-hero w-full flex justify-center items-center rounded-lg">
                 <div id="gallery" class="relative w-[65%] py-6 md:py-3 lg:py-0" data-carousel="slide">
                     <!-- Carousel wrapper -->
                     <div class="relative h-[16rem] sm:h-[20rem] overflow-hidden rounded-lg md:h-96">
@@ -105,16 +105,16 @@
                     </button>
                 </div>
             </div>
-            <div class="flex flex-col item-center py-6 gap-8 sm:pr-6 md:pr-8 lg:pr-12">
+            <div class="flex flex-col item-center py-6 md:py-10 gap-8 sm:pr-6 md:pr-8 lg:pr-12">
                 <h1
-                    class="relative text-2xl font-bold after:absolute after:bottom-[-25px] after:left-0 after:w-[80px] after:h-[4px] after:rounded-md after:bg-primary">
+                    class="relative text-2xl font-bold after:absolute after:bottom-[-25px] after:left-0 after:w-[80px] after:h-[4px] after:rounded-md after:bg-gradient-to-r from-[#62cff4] to-[#2c67f2]">
                     {{ $product->name }}</h1>
                 <section class="mt-4">
                     {!! $product->description !!}
                 </section>
                 <div class="flex items-center">
                     <a href=""
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-primary py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
+                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-black py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
                             <path
