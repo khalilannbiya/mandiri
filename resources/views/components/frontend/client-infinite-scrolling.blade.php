@@ -1,4 +1,7 @@
-<section class="max-w-7xl mx-auto flex justify-center items-center py-20">
+<section class="max-w-7xl mx-auto flex flex-col justify-center items-center gap-8 pt-24">
+    <h5 class="max-w-[380px] text-center text-black font-medium">
+        Dipercaya oleh beberapa klien
+    </h5>
     <div class="scroller" data-direction="right" data-speed="fast">
         <div class="scroller__inner flex justify-between overflow-hidden">
             <div class="flex items-center justify-center">

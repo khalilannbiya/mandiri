@@ -24,6 +24,9 @@
                         </div>
                     </div>
                 @endif
+                <h4 class="mb-4 text-lg font-semibold text-gray-900">
+                    Full Logo
+                </h4>
                 <img class="bg-slate-500 w-28"
                     src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/default-image.png') }}"
                     alt="Preview Logo">
@@ -34,6 +37,9 @@
                     <button type="submit"
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">Ubah</button>
                 </form>
+                <h4 class="mb-4 mt-6 text-lg font-semibold text-gray-900">
+                    Mini Logo
+                </h4>
                 <img class="bg-slate-500 w-28 mt-5"
                     src="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/default-image.png') }}"
                     alt="Preview Favicon">
