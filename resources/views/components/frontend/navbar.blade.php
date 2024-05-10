@@ -26,6 +26,10 @@
                         class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['about-us']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Tentang
                         Kami</a>
                 </li>
+                <li>
+                    <a href="{{ route('portfolio') }}"
+                        class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['portfolio']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Portfolio</a>
+                </li>
                 <li class="block lg:hidden">
                     <form action="{{ route('products') }}" method="GET">
                         <label for="default-search"

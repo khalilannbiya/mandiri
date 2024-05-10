@@ -25,6 +25,8 @@ Route::get('/', [FrontendController::class, 'index'])->middleware('userRoleAutoL
 
 Route::view('/about-us', 'pages.frontend.about-us')->name('about-us');
 
+Route::view('/portfolio', 'pages.frontend.portfolio')->name('portfolio');
+
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 
 Route::get('/products', [FrontendController::class, 'products'])->name('products');
