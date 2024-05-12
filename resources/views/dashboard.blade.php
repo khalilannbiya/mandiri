@@ -8,9 +8,9 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div
-                class="bg-white p-10 flex flex-col md:flex-row md:flex-wrap items-center justify-center md:justify-start gap-8 overflow-hidden shadow-xl sm:rounded-lg">
+                class="bg-white p-10 flex flex-col md:flex-row md:flex-wrap items-center justify-center md:justify-start lg:justify-center gap-8 overflow-hidden shadow-xl sm:rounded-lg">
                 <div
-                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%]">
+                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%] lg:basis-[30%]">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">Produk</h5>
                     </a>
@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div
-                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%]">
+                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%] lg:basis-[30%]">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">Kategori</h5>
                     </a>
@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div
-                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%]">
+                    class="max-w-sm text-center p-6 bg-white border border-gray-200 rounded-lg shadow-lg w-full md:basis-[45%] lg:basis-[30%]">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">User</h5>
                     </a>
@@ -58,8 +58,8 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-white mt-10 p-10 flex items-center justify-cente overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="flex flex-wrap justify-between items-center gap-6 mb-8 w-full">
+            <div class="bg-white mt-10 p-10 flex items-center justify-center overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="flex flex-wrap justify-between items-start gap-6 mb-8 w-full">
                     <div class="w-full md:w-[45%] mb-8 overflow-hidden rounded-lg shadow-xs">
                         <h4 class="mb-4 text-lg font-semibold text-gray-900">
                             Data Produk Terbaru

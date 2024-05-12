@@ -1,8 +1,8 @@
 <article
     class="relative group flex w-[250px] xl:w-[280px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-2xl transition-all duration-700 ease-in-out">
     <div
-        class="relative flex justify-center items-center mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-slate-300">
-        <img class="w-3/5 object-cover object-center aspect-video rounded-md"
+        class="relative flex justify-center items-center mx-4 p-2 -mt-6 h-40 md:h-[180px] overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-slate-300">
+        <img class="w-3/5 object-cover object-center aspect-square rounded-md"
             src="{{ $product->productGalleries()->exists() ? Storage::url($product->productGalleries[0]->url) : asset('assets/images/default-image.png') }}">
     </div>
     <div class="p-6">

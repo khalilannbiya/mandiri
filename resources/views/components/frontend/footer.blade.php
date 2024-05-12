@@ -66,6 +66,10 @@
                                 class="hover:underline py-1 block text-[13px] text-black">Tentang
                                 Kami</a>
                         </li>
+                        <li>
+                            <a href="{{ route('portfolio') }}"
+                                class="hover:underline py-1 block text-[13px] text-black">Portfolio</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,7 +82,7 @@
 <footer class="flex text-center px-4 py-8 justify-center">
     <p class="text-sm text-black">
         Copyright {{ date('Y') }} • All Rights Reserved Mandiri Printing & Graphics by
-        <a class="text-red-300 underline"
+        <a class="text-red-400 underline"
             href="https://api.whatsapp.com/send?phone=6282299231721&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
             target="_blank">Do's
             Id</a>
