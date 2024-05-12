@@ -23,6 +23,9 @@
                     <x-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                         {{ __('Products') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard.portfolio.index') }}" :active="request()->routeIs('dashboard.portfolio.index')">
+                        {{ __('Portfolios') }}
+                    </x-nav-link>
                     <x-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                         {{ __('Users') }}
                     </x-nav-link>
@@ -170,6 +173,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('dashboard.product.index') }}" :active="request()->routeIs('dashboard.product.index')">
                 {{ __('Products') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('dashboard.portfolio.index') }}" :active="request()->routeIs('dashboard.portfolio.index')">
+                {{ __('Portfolios') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                 {{ __('Users') }}
