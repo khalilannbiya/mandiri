@@ -7,9 +7,10 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\PortfolioRequest;
-use App\Http\Requests\PortfolioUpdateRequest;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\PortfolioUpdateRequest;
 
 class PortfolioController extends Controller
 {
@@ -75,6 +76,7 @@ class PortfolioController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses menambah portfolio!', 'success');
             return redirect()->route('dashboard.portfolio.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -120,6 +122,7 @@ class PortfolioController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses mengubah portfolio!', 'success');
             return redirect()->route('dashboard.portfolio.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -134,6 +137,7 @@ class PortfolioController extends Controller
     {
         $portfolio->delete();
 
+        Alert::toast('Sukses menghapus portfolio!', 'success');
         return redirect()->route('dashboard.portfolio.index');
     }
 }
