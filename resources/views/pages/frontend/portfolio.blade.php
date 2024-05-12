@@ -64,7 +64,7 @@
 
         {{-- Pagination --}}
         @if ($portfolios->lastPage() > 1)
-            {{ $portfolios->links('components.frontend.pagination') }}
+            {{ $portfolios->links('components.frontend.pagination-portfolio') }}
         @endif
 
     </section>
