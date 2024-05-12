@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ProductRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -70,6 +71,7 @@ class ProductController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses menambah produk!', 'success');
             return redirect()->route('dashboard.product.gallery.index', $product->slug);
         } catch (\Exception $e) {
             DB::rollBack();
@@ -112,6 +114,7 @@ class ProductController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses mengubah produk!', 'success');
             return redirect()->route('dashboard.product.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -126,6 +129,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
+        Alert::toast('Sukses menghapus produk!', 'success');
         return redirect()->route('dashboard.product.index');
     }
 }

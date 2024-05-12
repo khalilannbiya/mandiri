@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\ProductGallery;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\ProductGalleryRequest;
 
@@ -71,6 +72,7 @@ class ProductGalleryController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses menambahkan foto produk!', 'success');
             return redirect()->route('dashboard.product.gallery.index', $product->slug);
         } catch (\Exception $e) {
             DB::rollBack();
@@ -109,6 +111,7 @@ class ProductGalleryController extends Controller
     {
         $gallery->delete();
 
+        Alert::toast('Sukses menghapus foto produk!', 'success');
         return redirect()->route('dashboard.product.gallery.index', $gallery->product->slug);
     }
 }

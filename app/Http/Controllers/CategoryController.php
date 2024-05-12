@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CategoryRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
 class CategoryController extends Controller
@@ -65,6 +66,7 @@ class CategoryController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses menambah kategori!', 'success');
             return redirect()->route('dashboard.category.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -104,6 +106,7 @@ class CategoryController extends Controller
 
             DB::commit();
 
+            Alert::toast('Sukses mengubah kategori!', 'success');
             return redirect()->route('dashboard.category.index');
         } catch (\Exception $e) {
             DB::rollBack();
