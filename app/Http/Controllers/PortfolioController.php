@@ -75,7 +75,6 @@ class PortfolioController extends Controller
 
             DB::commit();
 
-            notify()->success('Sukses menambah portfolio!');
             return redirect()->route('dashboard.portfolio.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -121,7 +120,6 @@ class PortfolioController extends Controller
 
             DB::commit();
 
-            notify()->success('Sukses mengubah portfolio!');
             return redirect()->route('dashboard.portfolio.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -136,7 +134,6 @@ class PortfolioController extends Controller
     {
         $portfolio->delete();
 
-        notify()->success('Sukses menghapus portfolio!');
         return redirect()->route('dashboard.portfolio.index');
     }
 }
