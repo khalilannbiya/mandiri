@@ -14,9 +14,6 @@
     <link rel="apple-touch-icon"
         href="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/favicon.png') }}" />
 
-    {{-- Laravel Notify Styling --}}
-    @notifyCss
-
     {{-- Google Font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -128,7 +125,6 @@
 </head>
 
 <body class="font-rubik antialiased">
-    @include('notify::components.notify')
     <x-banner />
 
     <div class="min-h-screen bg-gray-100">
@@ -157,9 +153,6 @@
 
     <!--- Tambahkan setelah livewireScripts --->
     {{ $script ?? '' }}
-
-    {{-- Laravel Notify JS --}}
-    @notifyJs
 </body>
 
 </html>

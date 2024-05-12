@@ -65,7 +65,6 @@ class CategoryController extends Controller
 
             DB::commit();
 
-            notify()->success('Sukses menambah kategori!');
             return redirect()->route('dashboard.category.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -105,7 +104,6 @@ class CategoryController extends Controller
 
             DB::commit();
 
-            notify()->success('Sukses mengubah kategori!');
             return redirect()->route('dashboard.category.index');
         } catch (\Exception $e) {
             DB::rollBack();
@@ -120,7 +118,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        notify()->success('Sukses menghapus kategori!');
         return redirect()->route('dashboard.product.index');
     }
 

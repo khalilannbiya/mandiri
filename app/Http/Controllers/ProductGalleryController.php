@@ -71,7 +71,6 @@ class ProductGalleryController extends Controller
 
             DB::commit();
 
-            notify()->success('Sukses menambahkan foto produk!');
             return redirect()->route('dashboard.product.gallery.index', $product->slug);
         } catch (\Exception $e) {
             DB::rollBack();
@@ -110,7 +109,6 @@ class ProductGalleryController extends Controller
     {
         $gallery->delete();
 
-        notify()->success('Sukses menghapus foto produk!');
         return redirect()->route('dashboard.product.gallery.index', $gallery->product->slug);
     }
 }
