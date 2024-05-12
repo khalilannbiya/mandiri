@@ -9,6 +9,7 @@ use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardController extends Controller
 {
@@ -58,6 +59,7 @@ class DashboardController extends Controller
                         'favicon' => $path
                     ]);
                 }
+                Alert::toast('Sukses mengubah info!', 'success');
             }
 
             if ($request->hasFile('logo')) {
@@ -78,6 +80,7 @@ class DashboardController extends Controller
                         'logo' => $path
                     ]);
                 }
+                Alert::toast('Sukses mengubah info!', 'success');
             }
 
             DB::commit();

@@ -125,6 +125,7 @@
 </head>
 
 <body class="font-rubik antialiased">
+    @include('sweetalert::alert')
     <x-banner />
 
     <div class="min-h-screen bg-gray-100">

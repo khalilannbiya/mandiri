@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -78,6 +79,7 @@ class UserController extends Controller
 
         $user->update($data);
 
+        Alert::toast('Sukses mengubah user info!', 'success');
         return redirect()->route('dashboard.user.index');
     }
 
@@ -88,6 +90,7 @@ class UserController extends Controller
     {
         $user->delete();
 
+        Alert::toast('Sukses menghapus user!', 'success');
         return redirect()->route('dashboard.user.index');
     }
 }
