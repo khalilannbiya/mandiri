@@ -3,12 +3,11 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductGalleryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
-use function Ramsey\Uuid\v1;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +24,7 @@ Route::get('/', [FrontendController::class, 'index'])->middleware('userRoleAutoL
 
 Route::view('/about-us', 'pages.frontend.about-us')->name('about-us');
 
-Route::view('/portfolio', 'pages.frontend.portfolio')->name('portfolio');
+Route::get('/portfolio', [FrontendController::class, 'portfolios'])->name('portfolio');
 
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product-details');
 
@@ -64,5 +63,9 @@ Route::middleware([
 
         Route::get('/info', [DashboardController::class, 'editInfo'])->name('info.edit');
         Route::put('/info', [DashboardController::class, 'updateInfo'])->name('info.update');
+
+        Route::resource('portfolio', PortfolioController::class)->only([
+            'index', 'create', 'store', 'edit', 'update', 'destroy'
+        ]);
     });
 });

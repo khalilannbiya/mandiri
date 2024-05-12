@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Portfolio;
 use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 
@@ -92,5 +93,11 @@ class FrontendController extends Controller
         $category = Category::with('products')->where('slug', $slug)->firstOrFail();
         $products = $category->products()->with('productGalleries')->paginate(6);
         return view('pages.frontend.products-by-category', compact('products', 'category', 'categories'));
+    }
+
+    public function portfolios()
+    {
+        $portfolios = Portfolio::paginate(8);
+        return view('pages.frontend.portfolio', compact('portfolios'));
     }
 }
