@@ -1,50 +1,50 @@
 <section class="max-w-7xl mx-auto flex flex-col justify-center items-center gap-8 pt-24">
-    <h5 class="max-w-[380px] text-center text-black font-medium">
+    <h1 class="max-w-[380px] text-center text-black font-medium">
         Dipercaya oleh beberapa klien
-    </h5>
+    </h1>
     <div class="scroller" data-direction="right" data-speed="fast">
         <div class="scroller__inner flex justify-between overflow-hidden">
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-1.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-1.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-2.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-2.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-3.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-3.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-4.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-4.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-5.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-5.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-6.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-6.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-7.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-7.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-8.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-8.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-9.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-9.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-10.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-10.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-11.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-11.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-12.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-12.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-13.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-13.webp') }}" alt="Logo Klien" />
             </div>
             <div class="flex items-center justify-center">
-                <img class="w-[4rem]" src="{{ asset('assets/images/client-14.png') }}" alt="" />
+                <img class="w-[4rem]" src="{{ asset('assets/images/client-14.webp') }}" alt="Logo Klien" />
             </div>
         </div>
     </div>

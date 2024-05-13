@@ -10,7 +10,7 @@
             class="bg-gradient-hero flex w-full justify-center items-center gap-6 h-[26rem] py-10 px-2 md:px-10 lg:px-10 lg:py-10 rounded-xl">
             <div class="max-w-7xl flex justify-center items-center gap-6 rounded-xl">
                 <div class="self-start hidden lg:block">
-                    <img class="w-[16rem]" src="{{ asset('assets/icons/pencil.svg') }}" alt="">
+                    <img class="w-[16rem]" src="{{ asset('assets/icons/pencil.webp') }}" alt="Icon Percetakan" loading="lazy">
                 </div>
                 <div class="flex flex-col justify-center items-center gap-6">
                     <h1 class="text-[2.5rem] text-white md:text-5xl lg:text-6xl text-center font-semibold leading-tight">
@@ -19,7 +19,7 @@
                         Kualitasmu
                     </h1>
                     <p class="text-center text-white text-sm max-w-[20rem] sm:max-w-md lg:max-w-xl leading-normal">
-                        Dengan keahlian dan teknologi terkini, kami siap memberikan pengalaman percetakan yang tak
+                        Dengan keahlian dan teknologi terkini, kami siap memberikan pengalaman percetakan 24 jam yang tak
                         terlupakan
                         dan memuaskan. Selamat datang di dunia cetak yang menginspirasi dan berkualitas!
                     </p>
@@ -29,7 +29,8 @@
                     </a>
                 </div>
                 <div class="self-end hidden lg:block">
-                    <img class="w-[16rem]" src="{{ asset('assets/icons/pentool.svg') }}" alt="">
+                    <img class="w-[16rem]" src="{{ asset('assets/icons/pentool.webp') }}" alt="Icon Percetakan"
+                        loading="lazy">
                 </div>
             </div>
         </section>

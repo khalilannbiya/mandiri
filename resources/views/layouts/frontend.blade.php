@@ -24,7 +24,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
     {{-- Title --}}
-    <title>@yield('title', '')Percetakan Mandiri Print — Jasa Digital Printing & Percetakan Di Jakarta</title>
+    <title>@yield('title', '')Percetakan Mandiri Printing & Graphic — Jasa Digital Printing & Percetakan Di Jakarta
+    </title>
 
     <link rel="canonical" href="{{ URL::current() }}">
 
@@ -43,7 +44,7 @@
         {{-- Whatsapp floating button --}}
         <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20percetakan%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
             target="_blank"
-            class="bg-[#25d366] px-2 py-2 md:px-3 md:py-2  rounded-[50%] md:rounded-[20px] flex justify-between gap-2 items-center fixed bottom-16 md:bottom-6 right-4 z-[10]">
+            class="bg-[#25d365c6] px-2 py-2 md:px-3 md:py-2  rounded-[50%] md:rounded-[20px] flex justify-between gap-2 items-center fixed bottom-16 md:bottom-6 right-4 z-[10]">
             <svg class="fill-white w-[50px] h-[50px] md:w-[26px] md:h-[26px]" xmlns="http://www.w3.org/2000/svg"
                 width="26" height="26" viewBox="0 0 24 24" style="transform: ;msFilter:;">
                 <path fill-rule="evenodd" clip-rule="evenodd"
