@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="pt-[54px] md:pt-[72px]">
+    <section class="pt-[60px] md:pt-[82px]">
         <div
             class="bg-gradient-hero aspect-square lg:aspect-auto h-[300px] w-full flex flex-col items-center justify-center rounded-lg">
             <div class="max-w-7xl flex flex-col items-center justify-center gap-4">
@@ -57,7 +57,7 @@
 
         </section>
         <section class="w-full lg:basis-3/4 py-16 md:py-0 flex flex-wrap justify-start items-center">
-            <div class="bg-gradient-hero w-full flex justify-center items-center rounded-lg">
+            <div class="bg-slate-300 w-full flex justify-center items-center rounded-lg">
                 <div id="gallery" class="relative w-[65%] py-6 md:py-3 lg:py-0" data-carousel="slide">
                     <!-- Carousel wrapper -->
                     <div class="relative h-[16rem] sm:h-[20rem] overflow-hidden rounded-lg md:h-96">
@@ -114,7 +114,7 @@
                 </section>
                 <div class="flex items-center">
                     <a href=""
-                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-black py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
+                        class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-black hover:bg-slate-700 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
                             <path
