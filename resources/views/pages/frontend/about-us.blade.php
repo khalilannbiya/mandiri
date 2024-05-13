@@ -70,20 +70,20 @@
             </span>
         </h5>
         <section class="flex flex-wrap justify-center items-center gap-20 md:px-6">
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-1.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-2.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-3.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-4.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-5.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-6.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-7.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-8.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-9.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-10.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-11.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-12.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-13.png') }}" alt="Logo Client" />
-            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-14.png') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-1.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-2.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-3.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-4.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-5.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-6.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-7.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-8.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-9.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-10.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-11.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-12.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-13.webp') }}" alt="Logo Client" />
+            <img class="w-[3rem] md:w-[5rem]" src="{{ asset('assets/images/client-14.webp') }}" alt="Logo Client" />
         </section>
     </section>
     <section class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-5 py-10 px-4">
