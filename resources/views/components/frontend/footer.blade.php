@@ -9,9 +9,9 @@
         <aside class="container mx-auto">
             <div class="flex flex-wrap -mx-4 justify-around">
                 <div class="px-4 w-full md:w-3/12 mb-4 md:mb-0">
-                    <h5 class="text-lg text-black font-semibold mb-2 relative">
+                    <h1 class="text-lg text-black font-semibold mb-2 relative">
                         Lokasi
-                    </h5>
+                    </h1>
                     <a href="https://maps.app.goo.gl/CwXdt8hwW2ED9X4b9" class="hover:underline">
                         <address class="text-[13px] text-black capitalize">
                             pasar bendungan hilir lantai 1 AKS NO 18, RT.14/RW.1, Bend. Hilir, Kecamatan Tanah Abang,
@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <div class="px-4 w-full md:w-4/12 lg:w-3/12 mb-4 md:mb-0 accordion">
-                    <h5 class="text-lg text-black font-semibold mb-2 relative">Hubungi Kami</h5>
+                    <h1 class="text-lg text-black font-semibold mb-2 relative">Hubungi Kami</h1>
                     <ul class="h-0 md:h-auto">
                         <li>
                             <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20percetakan%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 <div class="px-4 w-full md:w-2/12 my-14 md:my-0 accordion">
-                    <h5 class="text-lg text-black font-semibold mb-2 relative">Telusuri</h5>
+                    <h1 class="text-lg text-black font-semibold mb-2 relative">Telusuri</h1>
                     <ul class="h-0 md:h-auto">
                         <li>
                             <a href="{{ route('index') }}"
@@ -82,7 +82,7 @@
 <footer class="flex text-center px-4 py-8 justify-center">
     <p class="text-sm text-black">
         Copyright {{ date('Y') }} • All Rights Reserved Mandiri Printing & Graphics by
-        <a class="text-red-400 underline"
+        <a class="text-blue-600 underline"
             href="https://api.whatsapp.com/send?phone=6282299231721&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
             target="_blank">Do's
             Id</a>
