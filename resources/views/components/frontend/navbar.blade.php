@@ -4,30 +4,30 @@
         <div
             class="max-w-7xl mx-auto top-0 left-0 flex items-center justify-between w-full px-4 md:px-4 py-3 md:py-5 lg:py-4">
             <div class="w-1/3">
-                <a href="{{ route('index') }}">
+                <a href="{{ route('index') }}" aria-label="Ke Halaman Beranda">
                     <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
                         src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
-                        alt="Logo Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
+                        alt="Logo Percetakan Mandiri Printing & Graphic | Tempat di mana kreativitas bertemu dengan teknologi" />
                 </a>
             </div>
             <ul id="navList"
                 class="fixed bg-[#F4F8FB] lg:ml-10 lg:static flex flex-col lg:flex-row justify-center items-center gap-7 md:gap-9 lg:gap-7 top-0 right-[-1000px] md:right-[-1000px] h-screen lg:h-auto w-full z-20 lg:z-0 bg-pewter-blue lg:bg-transparent lg:text-secondary font-semibold transition-all duration-1000">
                 <li>
-                    <a href="{{ route('index') }}"
+                    <a href="{{ route('index') }}" aria-label="Ke Halaman Beranda"
                         class="transition-all duration-500 md:text-lg lg:text-sm {{ Route::current()->getName() == 'index' ? 'text-slate-400 lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Beranda</a>
                 </li>
                 <li>
-                    <a href="{{ route('products') }}"
+                    <a href="{{ route('products') }}" aria-label="Ke Halaman Produk"
                         class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['products', 'show-by-category', 'product-details']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Produk
                         Kami</a>
                 </li>
                 <li>
-                    <a href="{{ route('about-us') }}"
+                    <a href="{{ route('about-us') }}" aria-label="Ke Halaman Tentang Kami"
                         class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['about-us']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Tentang
                         Kami</a>
                 </li>
                 <li>
-                    <a href="{{ route('portfolio') }}"
+                    <a href="{{ route('portfolio') }}" aria-label="Ke Halaman Portfolio"
                         class="transition-all duration-500 md:text-lg lg:text-sm {{ in_array(Route::current()->getName(), ['portfolio']) ? 'text-primary lg:text-primary' : 'text-black hover:text-primary lg:text-black lg:hover:text-primary' }}">Portfolio</a>
                 </li>
                 <li class="block lg:hidden">
@@ -44,7 +44,7 @@
                             <input type="text" name="keyword" id="default-search"
                                 class="block w-[70%] sm:w-full p-2 pl-9 sm:pl-11 text-sm text-black placeholder:text-black border border-black rounded-lg bg-transparent focus:ring-black focus:border-black"
                                 placeholder="Cari Produk..." />
-                            <button type="submit"
+                            <button type="submit" aria-label="Cari berdasarkan kata kunci"
                                 class="text-white bg-black hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-4 py-2">Cari</button>
                         </div>
                     </form>
@@ -57,7 +57,7 @@
                         <input type="text" name="keyword" id="default-search"
                             class="block lg:w-[180px] xl:w-[190px] p-2 text-sm border border-slate-600 bg-transparent focus:ring-black focus:border-black rounded-md"
                             placeholder="Cari Produk..." />
-                        <button type="submit"
+                        <button type="submit" aria-label="Cari berdasarkan kata kunci"
                             class="text-white bg-slate-800 hover:bg-slate-700 border border-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-800 transition-all duration-500 ease-in-out font-medium rounded-md text-sm px-4 py-2">Cari</button>
                     </div>
                 </form>

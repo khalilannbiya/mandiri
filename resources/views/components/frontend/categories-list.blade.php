@@ -1,9 +1,9 @@
 <div class="flex flex-col items-center lg:items-start gap-6">
-    <h2 class="text-xl text-black font-semibold hidden lg:block">Kategori Produk</h2>
+    <h1 class="text-xl text-black font-semibold hidden lg:block">Kategori Produk</h1>
     <div class="hidden lg:flex lg:flex-col gap-3">
         @forelse ($categories as $item)
             @if (isset($category) && $item->id == $category->id)
-                <a href="{{ route('show-by-category', $item->slug) }}"
+                <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
                     class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg bg-black transition-all duration-500 ease-in-out">
                     <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -16,7 +16,7 @@
                     <p class="text-white">{{ $item->name }}</p>
                 </a>
             @else
-                <a href="{{ route('show-by-category', $item->slug) }}"
+                <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
                     class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg hover:bg-black transition-all duration-500 ease-in-out">
                     <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="30"
                         height="30" viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -37,7 +37,7 @@
         <div class="item w-full flex flex-col rounded border border-gray-300 divide-y divide-gray-300 mb-2">
             <div
                 class="title p-4 md:p-2 font-semibold flex justify-between items-center cursor-pointer transform transition-color duration-700 ease-in-out">
-                <h2>Kategori Produk</h2>
+                <h1>Kategori Produk</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                     <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
@@ -47,7 +47,7 @@
                 <div class="transform duration-700 ease-in-out px-2 pb-10 divide-y flex flex-col">
                     @forelse ($categories as $item)
                         @if (isset($category) && $item->id == $category->id)
-                            <a href="{{ route('show-by-category', $item->slug) }}"
+                            <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
                                 class="group w-full flex items-center gap-10 py-4 pl-3 pr-6 rounded-lg bg-black transition-all duration-500 ease-in-out">
                                 <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -60,7 +60,7 @@
                                 <p class="text-white">{{ $item->name }}</p>
                             </a>
                         @else
-                            <a href="{{ route('show-by-category', $item->slug) }}"
+                            <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
                                 class="group w-full flex items-center gap-10 py-4 pl-3 pr-6 rounded-lg hover:bg-black transition-all duration-500 ease-in-out">
                                 <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">

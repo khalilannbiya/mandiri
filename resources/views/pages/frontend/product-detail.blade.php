@@ -13,7 +13,7 @@
                 <nav class="flex" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center justify-center flex-wrap space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
-                            <a href="{{ route('index') }}"
+                            <a href="{{ route('index') }}" aria-label="Kembali Ke Halaman Beranda"
                                 class="inline-flex items-center text-sm font-medium text-white hover:text-slate-300">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">
@@ -31,6 +31,7 @@
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
                                 <a href="{{ route('show-by-category', $product->category->slug) }}"
+                                    aria-label="{{ $product->category->name }}"
                                     class="ms-1 text-sm font-medium text-white hover:text-slate-300 md:ms-2">{{ $product->category->name }}</a>
                             </div>
                         </li>
@@ -77,7 +78,7 @@
                         @endforelse
                     </div>
                     <!-- Slider controls -->
-                    <button type="button"
+                    <button type="button" aria-label="Detail Foto Produk Sebelumnya"
                         class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                         data-carousel-prev>
                         <span
@@ -90,7 +91,7 @@
                             <span class="sr-only">Previous</span>
                         </span>
                     </button>
-                    <button type="button"
+                    <button type="button" aria-label="Detail Foto Produk Selanjutnya"
                         class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                         data-carousel-next>
                         <span
@@ -113,7 +114,7 @@
                     {!! $product->description !!}
                 </section>
                 <div class="flex items-center">
-                    <a href=""
+                    <a href="" aria-label="Beli Produk"
                         class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-black hover:bg-slate-700 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
