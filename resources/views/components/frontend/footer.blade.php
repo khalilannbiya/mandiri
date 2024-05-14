@@ -4,7 +4,8 @@
         <div class="flex justify-start md:justify-center mb-8">
             <img class="max-w-[130px] max-h-[35px] sm:max-w-[150px] sm:max-h-[40px] md:max-w-[160px] md:max-h-[46px] lg:max-w-[350px] lg:max-h-[50px] object-contain"
                 src="{{ isset($info->logo) ? Storage::url($info->logo) : asset('assets/images/logo.png') }}"
-                alt="Logo Percetakan Mandiri Print | Tempat di mana kreativitas bertemu dengan teknologi" />
+                alt="Logo Percetakan Mandiri Printing & Graphic | Tempat di mana kreativitas bertemu dengan teknologi"
+                loading="lazy" />
         </div>
         <aside class="container mx-auto">
             <div class="flex flex-wrap -mx-4 justify-around">
@@ -12,7 +13,8 @@
                     <h1 class="text-lg text-black font-semibold mb-2 relative">
                         Lokasi
                     </h1>
-                    <a href="https://maps.app.goo.gl/CwXdt8hwW2ED9X4b9" class="hover:underline">
+                    <a href="https://maps.app.goo.gl/CwXdt8hwW2ED9X4b9"
+                        title="Alamat Percetakan Mandiri Printing & Graphic" class="hover:underline">
                         <address class="text-[13px] text-black capitalize">
                             pasar bendungan hilir lantai 1 AKS NO 18, RT.14/RW.1, Bend. Hilir, Kecamatan Tanah Abang,
                             JAKARTA, Daerah Khusus Ibukota Jakarta 10210
@@ -24,7 +26,7 @@
                     <ul class="h-0 md:h-auto">
                         <li>
                             <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20percetakan%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
-                                target="_blank"
+                                aria-label="Hubungi melalui Whatsapp" target="_blank"
                                 class="hover:underline py-1 flex items-center text-[13px] text-black gap-2">
                                 <svg class="" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
@@ -36,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:mandiripercetakan93@gmail.com"
+                            <a href="mailto:mandiripercetakan93@gmail.com" aria-label="Hubungi melalui Email"
                                 class="hover:underline py-1 flex items-center text-[13px] text-black gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
@@ -53,21 +55,21 @@
                     <h1 class="text-lg text-black font-semibold mb-2 relative">Telusuri</h1>
                     <ul class="h-0 md:h-auto">
                         <li>
-                            <a href="{{ route('index') }}"
+                            <a href="{{ route('index') }}" aria-label="Ke Halaman Beranda"
                                 class="hover:underline py-1 block text-[13px] text-black">Beranda</a>
                         </li>
                         <li>
-                            <a href="{{ route('products') }}"
+                            <a href="{{ route('products') }}" aria-label="Ke Halaman Produk"
                                 class="hover:underline py-1 block text-[13px] text-black">Produk
                                 Kami</a>
                         </li>
                         <li>
-                            <a href="{{ route('about-us') }}"
+                            <a href="{{ route('about-us') }}" aria-label="Ke Halaman Tentang Kami"
                                 class="hover:underline py-1 block text-[13px] text-black">Tentang
                                 Kami</a>
                         </li>
                         <li>
-                            <a href="{{ route('portfolio') }}"
+                            <a href="{{ route('portfolio') }}" aria-label="Ke Halaman Portfolio"
                                 class="hover:underline py-1 block text-[13px] text-black">Portfolio</a>
                         </li>
                     </ul>
@@ -82,7 +84,7 @@
 <footer class="flex text-center px-4 py-8 justify-center">
     <p class="text-sm text-black">
         Copyright {{ date('Y') }} • All Rights Reserved Mandiri Printing & Graphics by
-        <a class="text-blue-600 underline"
+        <a class="text-blue-600 underline" aria-label="Hubungi melalui Whatsapp"
             href="https://api.whatsapp.com/send?phone=6282299231721&text=Halo,%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20yang%20Anda%20tawarkan.%20Saya%20ingin%20bertanya%20tentang..."
             target="_blank">Do's
             Id</a>

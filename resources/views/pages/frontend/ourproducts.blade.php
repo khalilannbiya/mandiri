@@ -13,7 +13,7 @@
                 <nav class="flex" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center justify-center flex-wrap space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
-                            <a href="{{ route('index') }}"
+                            <a href="{{ route('index') }}" aria-label="Kembali Ke Halaman Beranda"
                                 class="inline-flex items-center text-sm font-medium text-white hover:text-slate-300">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">

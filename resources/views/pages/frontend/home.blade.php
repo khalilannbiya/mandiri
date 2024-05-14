@@ -23,7 +23,7 @@
                         terlupakan
                         dan memuaskan. Selamat datang di dunia cetak yang menginspirasi dan berkualitas!
                     </p>
-                    <a href="{{ route('products') }}"
+                    <a href="{{ route('products') }}" aria-label="Ke Halaman Produk"
                         class="flex w-[10rem] items-center justify-center px-4 gap-3 md:mt-4 select-none bg-black py-3 text-center align-middle text-sm font-bold text-white hover:bg-slate-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none border-[1.5px] border-black rounded-lg">
                         Lihat Produk
                     </a>
@@ -120,7 +120,7 @@
                     @endforelse
                 </section>
                 <section class="flex justify-center items-center">
-                    <a href="{{ route('products') }}"
+                    <a href="{{ route('products') }}" aria-label="Ke Halaman Produk"
                         class="flex w-[10rem] items-center justify-center px-4 gap-3 select-none bg-transparent py-3 text-center align-middle text-sm font-bold text-black hover:bg-black hover:text-white transition-all duration-500 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none border-[1.5px] border-black rounded-lg">
                         Lihat Produk
                     </a>
@@ -156,7 +156,7 @@
                     memiliki sejarah yang menarik. Toko ini sebenarnya merupakan anak perusahaan dari Percetakan CV. Jasa
                     Pratama, yang telah berdiri selama lebih dari 30 tahun dan memiliki reputasi yang baik di Jakarta.
                 </p>
-                <a href="{{ route('about-us') }}"
+                <a href="{{ route('about-us') }}" aria-label="Ke Halaman Tentang Kami"
                     class="text-white px-4 py-3 bg-black hover:bg-slate-700 border border-black focus:ring-4 focus:outline-none focus:ring-black transition-all duration-500 ease-in-out font-medium text-sm rounded-lg">Lihat
                     Selengkapnya</a>
             </section>

@@ -6,7 +6,7 @@
 
                 @if ($paginator->onFirstPage())
                     <li>
-                        <button type="button"
+                        <button type="button" aria-label="Produk Sebelumnya"
                             class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-s-lg">
                             <svg class="fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -16,7 +16,7 @@
                     </li>
                 @else
                     <li class="group">
-                        <a href="{{ $paginator->previousPageUrl() }}"
+                        <a href="{{ $paginator->previousPageUrl() }}" aria-label="Produk Sebelumnya"
                             class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-s-lg hover:bg-slate-100">
                             <svg class="group-hover:fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -39,11 +39,12 @@
                             @if ($page == $paginator->currentPage())
                                 <li>
                                     <button type="button" aria-current="page"
+                                        aria-label="Produk Halaman Ke {{ $page }}"
                                         class="flex items-center justify-center px-3 h-8 text-black border border-slate-300 bg-slate-300 hover:bg-slate-400">{{ $page }}</button>
                                 </li>
                             @else
                                 <li>
-                                    <a href="{{ $url }}"
+                                    <a href="{{ $url }}" aria-label="Produk Halaman Ke {{ $page }}"
                                         class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-slate-300 hover:bg-slate-100 hover:text-slate-700">{{ $page }}</a>
                                 </li>
                             @endif
@@ -54,7 +55,7 @@
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
                     <li class="group">
-                        <a href="{{ $paginator->nextPageUrl() }}"
+                        <a href="{{ $paginator->nextPageUrl() }}" aria-label="Produk Selanjutnya"
                             class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-e-lg hover:bg-slate-100">
                             <svg class="group-hover:fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
@@ -65,7 +66,7 @@
                     </li>
                 @else
                     <li>
-                        <button type="button"
+                        <button type="button" aria-label="Produk Selanjutnya"
                             class="flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-slate-300 rounded-e-lg">
                             <svg class="fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" style="transform: ;msFilter:;">

@@ -15,9 +15,9 @@
         </p>
     </div>
     <div class="p-6 pt-0 flex justify-between items-center">
-        <a href="{{ route('product-details', $product->slug) }}" class="underline">Detail</a>
-        <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" target="_blank"
-            data-ripple-light="true"
+        <a href="{{ route('product-details', $product->slug) }}" aria-label="Detail Produk" class="underline">Detail</a>
+        <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Hello%20there!" aria-label="Beli Produk"
+            target="_blank" data-ripple-light="true"
             class="flex items-center justify-between px-4 gap-3 select-none rounded-md bg-black py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 style="fill: white;transform: ;msFilter:;">
