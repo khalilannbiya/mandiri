@@ -114,7 +114,8 @@
                     {!! $product->description !!}
                 </section>
                 <div class="flex items-center">
-                    <a href="" aria-label="Beli Produk"
+                    <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20%20Produk%20ini%20{{ url()->current() }}"
+                        aria-label="Beli Produk" target="_blank"
                         class="flex items-center justify-between px-4 gap-3 select-none rounded-lg bg-black hover:bg-slate-700 py-3 text-center align-middle text-sm font-bold text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none duration-500 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: white;transform: ;msFilter:;">
