@@ -50,7 +50,9 @@
                 @include('components.frontend.card-product')
 
             @empty
-                @include('components.frontend.product-not-found')
+                <div class="w-full flex justify-center items-center">
+                    <h2 class="font-semibold text-3xl">Belum Ada Produk</h2>
+                </div>
             @endforelse
         </section>
     </section>

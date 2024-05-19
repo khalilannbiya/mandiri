@@ -58,7 +58,7 @@
                     </div>
                 </article>
             @empty
-                @include('components.frontend.product-not-found')
+                @include('components.frontend.portfolio-not-found')
             @endforelse
         </section>
 
