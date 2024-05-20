@@ -24,6 +24,14 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'name' => "Syeich Khalil Annbiya",
+                'email' => "syeichkhalil@gmail.com",
+                'roles' => 'ADMIN',
+                'password' => Hash::make('123456789'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
         ]);
     }
 }

@@ -1,7 +1,12 @@
 @extends('layouts.frontend')
 
 @section('title')
-    Produk Kami —
+    Kategori {{ $category->name }} —
+@endsection
+
+@section('meta-description')
+    <meta name="description"
+        content="Temukan kategori percetakan {{ $category->name }} berkualitas dari Percetakan Mandiri Printing dan Graphic. Layanan percetakan terbaik di Jakarta, buka 24 jam.">
 @endsection
 
 @section('content')

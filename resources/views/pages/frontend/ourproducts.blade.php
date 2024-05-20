@@ -4,6 +4,11 @@
     Produk Kami —
 @endsection
 
+@section('meta-description')
+    <meta name="description"
+        content="Temukan berbagai produk cetak berkualitas dari Percetakan Mandiri Printing dan Graphic. Kami menawarkan cetakan murah dan cepat untuk banner, spanduk, undangan, dan banyak lagi. Layanan percetakan terbaik di Jakarta, buka 24 jam.">
+@endsection
+
 @section('content')
     <section class="pt-[60px] md:pt-[82px]">
         <div

@@ -4,6 +4,11 @@
     Portfolio Kami —
 @endsection
 
+@section('meta-description')
+    <meta name="description"
+        content="Lihat portofolio Percetakan Mandiri Printing dan Graphic yang menampilkan hasil cetakan berkualitas tinggi. Kami melayani cetak banner, spanduk, undangan, dan berbagai produk cetak lainnya dengan cepat dan murah di Jakarta.">
+@endsection
+
 @section('content')
     <section class="pt-[60px] md:pt-[82px]">
         <div
