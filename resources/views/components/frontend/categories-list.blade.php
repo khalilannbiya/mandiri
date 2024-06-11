@@ -1,39 +1,5 @@
 <div class="flex flex-col items-center lg:items-start gap-6">
-    <h1 class="text-xl text-black font-semibold hidden lg:block">Kategori Produk</h1>
-    <div class="hidden lg:flex lg:flex-col gap-3">
-        @forelse ($categories as $item)
-            @if (isset($category) && $item->id == $category->id)
-                <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
-                    class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg bg-black transition-all duration-500 ease-in-out">
-                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" style="transform: ;msFilter:;">
-                        <path
-                            d="M20 2H8c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM8 16V4h12l.002 12H8z">
-                        </path>
-                        <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
-                        <path d="m12 12-1-1-2 3h10l-4-6z"></path>
-                    </svg>
-                    <p class="text-white">{{ $item->name }}</p>
-                </a>
-            @else
-                <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
-                    class="group flex items-center gap-6 py-4 pl-3 pr-6 rounded-lg hover:bg-black transition-all duration-500 ease-in-out">
-                    <svg class="fill-black group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="30"
-                        height="30" viewBox="0 0 24 24" style="transform: ;msFilter:;">
-                        <path
-                            d="M20 2H8c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM8 16V4h12l.002 12H8z">
-                        </path>
-                        <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
-                        <path d="m12 12-1-1-2 3h10l-4-6z"></path>
-                    </svg>
-                    <p class="group-hover:text-white text-black">{{ $item->name }}</p>
-                </a>
-            @endif
-        @empty
-            <p class="text-black">Belum ada kategori</p>
-        @endforelse
-    </div>
-    <div class="accordion visible lg:invisible m-1 md:m-4 p-1 md:p-4">
+    <div class="w-full accordion m-1 md:mb-12 p-1 md:p-0 lg:py-0 lg:m-0">
         <div class="item w-full flex flex-col rounded border border-gray-300 divide-y divide-gray-300 mb-2">
             <div
                 class="title p-4 md:p-2 font-semibold flex justify-between items-center cursor-pointer transform transition-color duration-700 ease-in-out">
@@ -44,7 +10,8 @@
                 </svg>
             </div>
             <div class="body h-0 invisible overflow-hidden transform duration-700 ease-in-out">
-                <div class="transform duration-700 ease-in-out px-2 pb-10 divide-y flex flex-col">
+                <div id="categories-scrollbar"
+                    class="transform duration-700 ease-in-out px-2 pb-10 divide-y flex flex-col overflow-y-scroll h-[250px]">
                     @forelse ($categories as $item)
                         @if (isset($category) && $item->id == $category->id)
                             <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
