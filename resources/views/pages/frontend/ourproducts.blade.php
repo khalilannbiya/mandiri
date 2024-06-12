@@ -39,14 +39,14 @@
         </div>
     </section>
     <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 md:py-24 px-4">
-        <section class="w-full lg:w-[25%] xl-[20%] flex justify-center">
+        <section class="w-full md:w-full lg:w-[25%] xl-[20%] flex justify-center lg:justify-start">
 
             {{-- Categories List --}}
             @include('components.frontend.categories-list')
 
         </section>
         <section
-            class="w-full lg:w-[75%] py-16 md:py-6 flex flex-wrap justify-center lg:justify-start items-center gap-y-20 gap-x-8 xl:gap-x-12">
+            class="w-full lg:w-[75%] py-16 md:py-6 flex flex-wrap justify-center lg:justify-start items-start gap-y-20 gap-x-8 xl:gap-x-12">
             @forelse ($products as $product)
                 {{-- Card Prod --}}
                 @include('components.frontend.card-product')
