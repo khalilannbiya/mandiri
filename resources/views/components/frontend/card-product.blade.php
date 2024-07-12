@@ -7,14 +7,17 @@
             alt="Foto {{ $product->name }}">
     </div>
     <div class="p-6">
-        <h1 class="mb-2 block text-xl font-semibold leading-snug tracking-normal text-black antialiased">
+        <h1 class="mb-2 block text-xl font-semibold leading-snug capitalize tracking-normal text-black antialiased">
             {{ $product->name }}
         </h1>
-        <p class="block text-base text-primary font-normal leading-relaxed text-inherit antialiased">
-            Rp. {{ number_format($product->price) }}
-        </p>
+        <div class="mt-5">
+            <h2 class="font-light text-sm text-primary">Mulai dari</h2>
+            <p class="block text-xl text-black font-normal leading-relaxed text-inherit antialiased">
+                Rp. {{ number_format($product->price) }}
+            </p>
+        </div>
     </div>
-    <div class="p-6 pt-0 flex justify-between items-center">
+    <div class="p-6 mt-3 pt-0 flex justify-between items-center">
         <a href="{{ route('product-details', $product->slug) }}" aria-label="Detail Produk" class="underline">Detail</a>
         <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20%20Produk%20ini%20{{ env('APP_URL') . 'product/' . $product->slug }}"
             aria-label="Beli Produk" target="_blank" data-ripple-light="true"

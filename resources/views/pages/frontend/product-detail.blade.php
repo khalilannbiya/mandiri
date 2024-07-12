@@ -51,7 +51,7 @@
         </div>
     </section>
     <section class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between py-10 md:py-24 px-4">
-        <section class="w-full lg:basis-1/4 flex justify-center">
+        <section class="w-full lg:basis-1/4 flex justify-center lg:justify-start">
 
             {{-- Categories List --}}
             @include('components.frontend.categories-list')
