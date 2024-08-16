@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#categories-scrollbar {
+    padding-top: 0.5rem !important;
+}
+
 #categories-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
