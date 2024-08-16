@@ -24,7 +24,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
     {{-- Title --}}
-    <title>@yield('title', '')Percetakan Mandiri Printing & Graphic — Jasa Digital Printing & Percetakan Di Jakarta
+    <title>@yield('title', '')Percetakan Mandiri Printing dan Graphic | Cetak Murah Berkualitas Tinggi 24 Jam di Jakarta
     </title>
 
     <link rel="canonical" href="{{ URL::current() }}">

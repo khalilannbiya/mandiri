@@ -1,7 +1,12 @@
 @extends('layouts.frontend')
 
 @section('title')
-    Detail Produk —
+    Cetak {{ $product->name }} —
+@endsection
+
+@section('meta-description')
+    <meta name="description"
+        content="Jasa cetak {{ $product->name }} berkualitas dari Percetakan Mandiri Printing dan Graphic. Kami menawarkan cetakan murah dan cepat untuk kebutuhan {{ $product->name }} Anda. Layanan percetakan terbaik di Jakarta, buka 24 jam.">
 @endsection
 
 @section('content')

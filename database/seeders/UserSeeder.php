@@ -17,17 +17,17 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => "Syeich Khalil Annbiya",
-                'email' => "syeichkhalil@gmail.com",
+                'name' => "Admin",
+                'email' => "admin@percetakanmandiri.com",
                 'roles' => 'ADMIN',
-                'password' => Hash::make('123456789'),
+                'password' => Hash::make('adminmandiri123'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => "Indra Frimawan",
-                'email' => "indrafri@gmail.com",
-                'roles' => 'USER',
+                'name' => "Syeich Khalil Annbiya",
+                'email' => "syeichkhalil@gmail.com",
+                'roles' => 'ADMIN',
                 'password' => Hash::make('123456789'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

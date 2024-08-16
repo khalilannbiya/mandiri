@@ -4,6 +4,11 @@
     Tentang Kami —
 @endsection
 
+@section('meta-description')
+    <meta name="description"
+        content="Pelajari lebih lanjut tentang Percetakan Mandiri Printing dan Graphic, penyedia layanan percetakan murah, cepat, dan berkualitas di Jakarta. Buka 24 jam, kami berkomitmen memberikan solusi cetak terbaik untuk kebutuhan Anda.">
+@endsection
+
 @section('content')
     <section class="pt-[60px] md:pt-[82px]">
         <div

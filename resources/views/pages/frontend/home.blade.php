@@ -1,7 +1,8 @@
 @extends('layouts.frontend')
 
-@section('title')
-    Beranda -
+@section('meta-description')
+    <meta name="description"
+        content="Percetakan Mandiri Printing dan Graphic menawarkan layanan percetakan murah, cepat, dan berkualitas di Jakarta. Buka 24 jam, kami siap membantu kebutuhan cetak banner, spanduk, undangan, dan berbagai produk cetak lainnya.">
 @endsection
 
 @section('content')
@@ -41,8 +42,8 @@
             <section class="flex flex-col justify-center items-center gap-5">
                 <h1 class="text-4xl text-black font-semibold">Keunggulan Kami</h1>
                 <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-lg leading-normal text-slate-400">
-                    Dengan beragam pilihan yang disesuaikan dengan kebutuhan
-                    Anda, kami menyediakan solusi yang inovatif dan berkualitas untuk memenuhi kebutuhan Anda.
+                    Percetakan Mandiri Printing dan Graphic menawarkan berbagai keunggulan dalam layanan percetakan murah,
+                    cepat, dan berkualitas di Jakarta.
                 </p>
             </section>
             <section class="w-full">
@@ -104,8 +105,9 @@
             <section class="flex flex-col justify-center items-center gap-5">
                 <h1 class="text-4xl text-black font-semibold">Produk Terbaik Kami</h1>
                 <p class="text-center text-sm max-w-[20rem] sm:max-w-md lg:max-w-lg leading-normal text-slate-400">
-                    Dengan beragam pilihan yang disesuaikan dengan kebutuhan
-                    Anda, kami menyediakan solusi yang inovatif dan berkualitas untuk memenuhi kebutuhan Anda.
+                    Dengan beragam pilihan yang disesuaikan dengan kebutuhan Anda, kami menyediakan cetak berkualitas untuk
+                    mencetak banner, spanduk, dan produk lainnya. Buka 24 jam, siap
+                    memenuhi kebutuhan Anda.
                 </p>
             </section>
             <section class="flex flex-col justify-center items-center gap-6">

@@ -1,7 +1,12 @@
 @extends('layouts.frontend')
 
 @section('title')
-    Produk Kami —
+    Kategori {{ $category->name }} —
+@endsection
+
+@section('meta-description')
+    <meta name="description"
+        content="Temukan kategori percetakan {{ $category->name }} berkualitas dari Percetakan Mandiri Printing dan Graphic. Layanan percetakan terbaik di Jakarta, buka 24 jam.">
 @endsection
 
 @section('content')
@@ -50,7 +55,9 @@
                 @include('components.frontend.card-product')
 
             @empty
-                @include('components.frontend.product-not-found')
+                <div class="w-full flex justify-center items-center">
+                    <h2 class="font-semibold text-3xl">Belum Ada Produk</h2>
+                </div>
             @endforelse
         </section>
     </section>
