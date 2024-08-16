@@ -11,7 +11,7 @@
             </div>
             <div class="body h-0 invisible overflow-hidden transform duration-700 ease-in-out">
                 <div id="categories-scrollbar"
-                    class="transform duration-700 ease-in-out px-2 pt-0 pb-2 divide-y flex flex-col overflow-y-scroll h-auto max-h-[250px]">
+                    class="transform duration-700 ease-in-out px-2 pt-0 pb-2 divide-y flex flex-col overflow-y-scroll h-auto max-h-64">
                     @forelse ($categories as $item)
                         @if (isset($category) && $item->id == $category->id)
                             <a href="{{ route('show-by-category', $item->slug) }}" aria-label="{{ $item->name }}"
