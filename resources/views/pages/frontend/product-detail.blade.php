@@ -118,6 +118,12 @@
                 <section class="mt-4">
                     {!! $product->description !!}
                 </section>
+                <section class="mt-5">
+                    <h2 class="font-light text-sm text-primary">Mulai dari</h2>
+                    <p class="block text-xl text-black font-normal leading-relaxed text-inherit antialiased">
+                        Rp. {{ number_format($product->price) }}
+                    </p>
+                </section>
                 <div class="flex items-center">
                     <a href="https://api.whatsapp.com/send?phone=6281290959055&text=Halo,%20Saya%20tertarik%20dengan%20%20Produk%20ini%20{{ url()->current() }}"
                         aria-label="Beli Produk" target="_blank"
