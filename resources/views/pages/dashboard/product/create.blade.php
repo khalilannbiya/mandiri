@@ -9,20 +9,20 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div>
                 @if ($errors->any())
-                <div class="mb-5" role="alert">
-                    <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-                        There's something wrong!
+                    <div class="mb-5" role="alert">
+                        <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                            There's something wrong!
+                        </div>
+                        <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+                            <p>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                            </p>
+                        </div>
                     </div>
-                    <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-                        <p>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        </p>
-                    </div>
-                </div>
                 @endif
 
                 <form action="{{ route('dashboard.product.store') }}" method="post" enctype="multipart/form-data"
@@ -47,9 +47,9 @@
                                 class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                                 <option selected value="">Select Nama Kategori</option>
                                 @forelse ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @empty
-                                <option selected disabled>Belum Ada Kategori</option>
+                                    <option selected disabled>Belum Ada Kategori</option>
                                 @endforelse
                             </select>
                         </div>
@@ -86,6 +86,8 @@
     </div>
     <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace( 'description' );
+        CKEDITOR.replace('description', {
+            versionCheck: false,
+        });
     </script>
 </x-app-layout>
