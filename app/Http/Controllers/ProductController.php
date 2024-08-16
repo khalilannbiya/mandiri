@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ProductRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends Controller
 {
@@ -16,20 +20,22 @@ class ProductController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Product::query();
+            $query = Product::with('category')->get();
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded shadow-lg" href="' . route('dashboard.product.gallery.index', $item->id) . '">
+                    <div class="flex">
+                        <a class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded shadow-lg" href="' . route('dashboard.product.gallery.index', $item->slug) . '">
                             Gallery
                         </a>
-                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 ml-3 rounded shadow-lg" href="' . route('dashboard.product.edit', $item->id) . '">
+                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 ml-3 rounded shadow-lg" href="' . route('dashboard.product.edit', $item->slug) . '">
                             Edit
                         </a>
                         <form action="' . route('dashboard.product.destroy', $item->id) . '" method="post" class="inline-block">
                         <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
                         ' . method_field('delete') . csrf_field() . '
                         </form>
+                    </div>
                     ';
                 })
                 ->editColumn('price', function ($item) {
@@ -46,7 +52,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.product.create');
+        $categories = Category::all();
+        return view('pages.dashboard.product.create', compact('categories'));
     }
 
     /**
@@ -54,12 +61,22 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
+        try {
+            DB::beginTransaction();
 
-        Product::create($data);
+            $data = $request->all();
+            $data['slug'] = Str::slug($request->name);
 
-        return redirect()->route('dashboard.product.index');
+            $product = Product::create($data);
+
+            DB::commit();
+
+            Alert::toast('Sukses menambah produk!', 'success');
+            return redirect()->route('dashboard.product.gallery.index', $product->slug);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->withErrors(['error' => 'Failed to create product: ' . $e->getMessage()]);
+        }
     }
 
     /**
@@ -73,24 +90,36 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(string $slug)
     {
+        $product = Product::where('slug', $slug)->first();
         return view('pages.dashboard.product.edit', [
-            'item' => $product
+            'item' => $product,
+            'categories' => Category::all()
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(ProductRequest $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->name);
+        try {
+            DB::beginTransaction();
 
-        $product->update($data);
+            $data = $request->all();
+            $data['slug'] = Str::slug($request->name);
 
-        return redirect()->route('dashboard.product.index');
+            $product->update($data);
+
+            DB::commit();
+
+            Alert::toast('Sukses mengubah produk!', 'success');
+            return redirect()->route('dashboard.product.index');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return back()->withErrors(['error' => 'Failed to update product: ' . $e->getMessage()]);
+        }
     }
 
     /**
@@ -100,6 +129,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
+        Alert::toast('Sukses menghapus produk!', 'success');
         return redirect()->route('dashboard.product.index');
     }
 }

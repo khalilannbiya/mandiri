@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Percetakan Mandiri Print — Jasa Digital Printing & Percetakan Di Jakarta</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    {{-- Favicon --}}
+    <link rel="icon" type="image/png"
+        href="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/favicon.png') }}" />
+    <link rel="apple-touch-icon"
+        href="{{ isset($info->favicon) ? Storage::url($info->favicon) : asset('assets/images/favicon.png') }}" />
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- Google Font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
 
     <!--- Tambahkan setelah app.css --->
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -115,9 +121,11 @@
 
     <!-- Styles -->
     @livewireStyles
+    @vite('resources/css/app.css')
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-rubik antialiased">
+    @include('sweetalert::alert')
     <x-banner />
 
     <div class="min-h-screen bg-gray-100">
@@ -125,11 +133,11 @@
 
         <!-- Page Heading -->
         @if (isset($header))
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
         @endif
 
         <!-- Page Content -->
@@ -141,6 +149,8 @@
     @stack('modals')
 
     @livewireScripts
+
+    @vite('resources/js/app.js')
 
     <!--- Tambahkan setelah livewireScripts --->
     {{ $script ?? '' }}

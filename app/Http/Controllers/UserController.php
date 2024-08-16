@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -15,17 +17,19 @@ class UserController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = User::query();
+            $query = User::all();
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 ml-3 rounded shadow-lg" href="' . route('dashboard.user.edit', $item->id) . '">
-                            Edit
-                        </a>
-                        <form action="' . route('dashboard.user.destroy', $item->id) . '" method="post" class="inline-block">
-                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
-                        ' . method_field('delete') . csrf_field() . '
-                        </form>
+                        <div class="flex">
+                            <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 ml-3 rounded shadow-lg" href="' . route('dashboard.user.edit', $item->id) . '">
+                                Edit
+                            </a>
+                            <form action="' . route('dashboard.user.destroy', $item->id) . '" method="post" class="inline-block">
+                            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-3 py-1 px-3 rounded shadow-lg">Delete</button>
+                            ' . method_field('delete') . csrf_field() . '
+                            </form>
+                        </div>
                     ';
                 })
                 ->rawColumns(['action'])
@@ -75,6 +79,7 @@ class UserController extends Controller
 
         $user->update($data);
 
+        Alert::toast('Sukses mengubah user info!', 'success');
         return redirect()->route('dashboard.user.index');
     }
 
@@ -85,6 +90,7 @@ class UserController extends Controller
     {
         $user->delete();
 
+        Alert::toast('Sukses menghapus user!', 'success');
         return redirect()->route('dashboard.user.index');
     }
 }

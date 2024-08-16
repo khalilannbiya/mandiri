@@ -10,19 +10,24 @@
             // AJAX Datatable
 
             var datatable = $('#crudTable').DataTable({
-                ajax:{
-                    url:'{!! url()->current() !!}'
+                ajax: {
+                    url: '{!! url()->current() !!}'
                 },
-                columns:[
-                    {data:'id', name:'id', width:'5%'},
-                    {data:'url', name:'url'},
-                    {data:'is_featured', name:'is_featured'},
+                columns: [{
+                        data: 'id',
+                        name: 'id',
+                        width: '5%'
+                    },
                     {
-                        data:'action',
-                        name:'action',
-                        orderable:false,
-                        searchable:false,
-                        width:'25%'
+                        data: 'url',
+                        name: 'url'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false,
+                        width: '25%'
                     }
                 ]
             });
@@ -32,18 +37,17 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{ route('dashboard.product.gallery.create', $product->id) }}"
+                <a href="{{ route('dashboard.product.gallery.create', $product->slug) }}"
                     class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded shadow-lg">+
                     Upload Photos</a>
             </div>
             <div class="shadow overflow-hidden sm-rounded-md">
-                <div class="px-4 py-5 bg-white sm:p-6">
+                <div class="px-4 py-5 bg-white sm:p-6 overflow-auto">
                     <table id="crudTable">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Photo</th>
-                                <th>Featured</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

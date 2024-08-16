@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <a href="{{ route('dashboard.product.index') }}">Product</a> &raquo; {{ $product->name }} &raquo; <a
-                href="{{ route('dashboard.product.gallery.index', $product->id) }}">Gallery</a>
+                href="{{ route('dashboard.product.gallery.index', $product->slug) }}">Gallery</a>
             &raquo; Upload Photos
         </h2>
     </x-slot>

@@ -11,8 +11,14 @@ module.exports = {
 
     theme: {
         extend: {
+            colors: {
+                primary: '#94A3B8',
+                white: '#FFFFFF',
+                black: '#1e293b',
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                rubik: ['Rubik', ...defaultTheme.fontFamily.sans],
+                epilogue: ['Epilogue', ...defaultTheme.fontFamily.sans],
             },
         },
     },

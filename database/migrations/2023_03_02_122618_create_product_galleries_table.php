@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_galleries', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('product_id');
-            $table->string('url');
-            $table->boolean('is_featured')->default(false);
-            $table->softDeletes();
+            $table->increments('id');
+            $table->unsignedInteger('product_id')->nullable(false);
+            $table->string('url', 200)->nullable(false);
             $table->timestamps();
+
+            $table->foreign('product_id')->references('id')->on('products')->cascadeOnDelete();
         });
     }
 
